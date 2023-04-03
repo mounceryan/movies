@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <body>
+<script>function sortList() {
+  var list, i, switching, b, shouldSwitch;
+  list = document.getElementById("id01");
+  switching = true;
+  /* Make a loop that will continue until
+  no switching has been done: */
+  while (switching) {
+    // start by saying: no switching is done:
+    switching = false;
+    b = list.getElementsByTagName("h1");
+    // Loop through all list-items:
+    for (i = 0; i < (b.length - 1); i++) {
+      // start by saying there should be no switching:
+      shouldSwitch = false;
+      /* check if the next item should
+      switch place with the current item: */
+      if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+        /* if next item is alphabetically
+        lower than current item, mark as a switch
+        and break the loop: */
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark the switch as done: */
+      b[i].parentNode.parentNode.parentNode.insertBefore(b[i + 1].parentNode.parentNode, b[i].parentNode.parentNode);
+      switching = true;
+    }
+  }
+}</script>
+      
+      
+<button onclick="sortList()">Sort</button>
+<div class="row" id="id01">
+
+  <div class="column">
+      <a>
+    <div class="contentt">
+        <div>
+            <div class=theimg><img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="Oliver Twist"></div>
+            <h1>Oliver Twist</h1>
+        </div>
+    </div>
+          </a>
+  </div>
+
+  <div class="column">
+      <a>
+    <div class="contentt">
+        <div>
+      <div class=theimg><img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="Harry Potter en de Steen der Wijzen"></div>
+      <h1>Harry Potter en de Steen der Wijzen</h1>
+        </div>
+    </div>
+      </a>
+  </div>
+
+  <div class="column">
+      <a>
+    <div class="contentt">
+        <div>
+      <div class=theimg><img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="Harry Potter en de Geheime Kamer"></div>
+      <h1>Harry Potter en de Geheime Kamer</h1>
+        </div>
+    </div>
+      </a>
+  </div>
+    
+    <div class="movie-box">
+            <img src="posters/clockork.jpg" class="movie-poster">
+            <a href="https://www.amazon.co.uk/gp/video/detail/B00FFIID88/ref=atv_yv_hom_c_unkc_1_1">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <h1 class="movie-title">A Clockwork Orange</h1>
+                        <p class="movie-detail">Stanley Kubrick</p>
+                        <p class="movie-detail">1971</p>
+                        <p class="movie-detail">Dystopian</p>
+                        <p class="movie-detail">2 hours 11 minutes</p> 
+                        <p class="movie-detail-hidden">Malcolm McDowell, Patrick Magee, Michael Bates, Philip Stone</p>
+                    </div>
+                    <img src="icons/prie.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/1.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+
+
+
+</div>
+  </body>
+</html>

@@ -1,0 +1,422 @@
+html, body{
+    background-color: black;
+    margin: 0;
+}
+
+@font-face {
+    font-family: california-gothic;
+     src: url(california-gothic.otf);
+}
+
+@font-face {
+    font-family: plymouth-regular;
+     src: url(plymouth-regular.ttf);
+}
+
+@font-face {
+    font-family: plymouth-bold;
+     src: url(plymouth-bold.ttf);
+}
+
+@font-face {
+    font-family: gill-sans-light;
+     src: url(gill-sans-light.ttf);
+}
+
+@font-face {
+    font-family: hollywood-hills;
+     src: url(hollywood-hills.ttf);
+}
+
+@font-face {
+    font-family: aachen-bold;
+     src: url(aachen-bold.ttf);
+}
+
+@font-face {
+    font-family: harry-potter;
+     src: url(harry-potter.ttf);
+}
+
+@font-face {
+    font-family: star-wars;
+     src: url(star-wars.ttf);
+}
+
+a{
+    text-decoration:none;
+    color:white;
+}
+
+/*Top Bar*/
+
+#top-bar{
+    position: fixed;
+    display:block;
+    padding:1vw;
+    overflow:hidden;
+    font-size: 0;
+    height: 5vw;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.8), rgba(0,0,0,0.5), rgba(0,0,0,0));
+    z-index:999;
+}
+
+.top-title-box{
+    float:left;
+    width: 20vw;
+    margin: 0;
+    background-color: rgba(255,255,255,0);
+    padding:1vw; 
+}
+
+.top-title{
+    margin: 0;
+    border-top: solid 5px white;
+    border-bottom: solid 5px white;
+    color: white;
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: california-gothic;
+    padding: 6px 3px 3px 3px;
+    text-align: center;
+    line-height: 2.5vw;
+}
+
+#top-search-box{
+    float:left;
+    width: 51vw;
+    margin: 0 0 0 3vw;
+    padding:1vw; 
+}
+
+#search1{
+    display: block; 
+    float:left;
+    width: 45vw;
+    padding: 4px 1vw 5px 5px;
+    margin: 0;
+    border-top: solid 5px rgba(255,255,255,0);
+    border-bottom: solid 5px white;
+    border-left: none;
+    border-right: none;
+    font-size: 2vw;
+    height: 2.5vw;
+    font-weight: bold;
+    font-family: plymouth-bold;
+    background-color: rgba(0,0,0,0);
+    border-radius: 0;
+}
+
+input#search1, input#search1::placeholder{
+    color: white;
+    outline: none;
+}
+
+#search-results{
+    display: none;
+    color: white;
+    padding:1vw 0 0 1vw;
+    margin: 0;
+    font-size: 2vw;
+    font-family: plymouth-bold;
+}
+
+/*Top Bar Mobile*/
+
+@media screen 
+  and (orientation: portrait),
+    (max-device-width: 480px){
+    
+    #top-bar{
+    height: auto;
+    }
+    
+    .top-title-box {
+    float: none;
+    width: 40vw;
+    margin:2vw auto 0 auto;
+    padding:2vw; 
+  }
+    
+    .top-title{
+    font-size: 4vw;
+    line-height: 5vw;
+    border-top: solid 2.5px black;
+    border-bottom: solid 2.5px black;
+    }
+    
+    #top-search-box{
+    float:none;
+    width: 98vw;
+    margin: auto;
+    padding: 1vw; 
+    }
+    
+    #search1{
+    float: none;
+    width: 82vw;
+    padding: 1vw;
+    margin: 2vw auto;
+    border-top: solid 2.5px black;
+    border-bottom: solid 2.5px white;
+    font-size: 4vw;
+    height: 5vw;
+    }
+        
+    #search-results{
+    padding:2vw 0 0 2vw;
+    font-size: 4vw;
+    }
+}
+
+/*Banner*/
+
+#block{
+    display: none;
+    height: 10vw;
+    width: 100%;
+    margin: 0;
+}
+
+#banner-link{
+    display: block;  
+}
+
+#banner{
+    display: block;
+    width: 100vw;
+    height: 80vh;
+    background-image: url("banners/odyssey.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s ease-in-out;
+    
+}
+
+#banner img.transparent {
+opacity:0;
+}
+
+#banner-title-box{
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+}
+
+#banner-title{
+    position: absolute;
+    bottom: 60px;
+    margin: 0 0 0 60px;
+    width: 80%;
+    text-align: left;
+    font-size: 6vw;
+    font-family: gill-sans-light;
+}
+
+/*Buttons*/
+
+#button-box{
+    display: block;
+    width: fit-content;
+    margin: 1vw auto;
+}
+
+.buttons{
+    margin: 0;
+    border: none;
+    font-size: 1vw;
+    font-family: plymouth-bold;
+    width: 10vw;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+    outline: none;
+}
+
+#view-genres{
+    border-radius: 15px 0 0 15px;
+    background-color: white;
+    -webkit-box-shadow: inset 0px 0px 5px #212121;
+     -moz-box-shadow: inset 0px 0px 5px #212121;
+          box-shadow: inset 0px 0px 5px #212121;
+    border-radius: 15px 0 0 15px;
+}
+
+#view-genres:focus{
+    background-color: #424242;
+    color: white;
+}
+
+#view-all{
+    background-color: #424242;
+    color: white;
+    -webkit-box-shadow: inset 0px 0px 5px #212121;
+     -moz-box-shadow: inset 0px 0px 5px #212121;
+          box-shadow: inset 0px 0px 5px #212121;
+    border-radius: 0 15px 15px 0;
+}
+
+#view-genres:hover, #view-all:hover {
+    background-color: white;
+    color: black;
+}
+
+/*Content*/
+
+#content{
+    display: block;
+    margin: 0 0 30px 0;
+}
+
+.content-title{
+    color: white;
+    padding: 0 0 0 1vw;
+    margin: 0;
+    font-size: 2vw;
+    font-family: plymouth-bold;
+}
+
+.content-row{
+    display:block;
+    padding:1vw;
+    overflow: auto;
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.content-row::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 0;
+    height: 0;
+}
+
+/*ContentMobile*/
+
+@media screen 
+  and (orientation: portrait),
+    (max-device-width: 480px){
+    
+    .content-title{
+    padding:2vw 0 0 2vw;
+    font-size: 4vw;
+    }
+       
+}
+
+/*Movie Box*/
+
+.movie-box{
+    position: relative;
+    display: inline-block;
+    margin: 0 0.5vw 0 0;
+    width: 16.5vw;   
+    transition: display 2s;
+    transition: scale 0.2s, ease-in-out;
+}
+
+.movie-box > a > div {
+    visibility: hidden;
+    opacity: 1;
+    transition: visibility 0.1s, opacity 0.2s ease-in-out;
+}
+
+.movie-box:hover > a > div {
+    visibility: visible;
+    opacity: 1;
+}
+
+.movie-box:hover{
+    transform: scale(1.05);
+}
+
+.movie-poster{
+    height: 100%;
+    width: 100%;
+}
+
+.movie-information{
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width:100%;
+    background-color:rgba(0,0,0,0.75);
+    margin: 0;
+}
+
+.movie-details{
+    width:90%;
+    margin: 0 5%;
+}
+
+.movie-title{
+    font-family: plymouth-bold;
+    text-align: center;
+    font-size: 26px; 
+    white-space: normal;
+}
+
+.movie-detail{
+    font-family: plymouth-regular;
+    text-align: center;
+    font-size: 18px;
+}
+
+.movie-detail:nth-child(2)::before {
+  content: "Directed by ";
+}
+
+.movie-detail:nth-child(3)::before {
+  content: "Released in ";
+}
+
+
+.movie-detail-hidden{
+    display: none;
+    visibility: hidden;
+}
+
+.movie-icon{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    margin: 1vw;
+    width: 3vw;
+}
+
+.movie-icon-left{
+    left: 0;
+}
+
+.movie-icon-right{
+    right: 0;
+}
+
+/*Movie Box Mobile*/
+
+@media screen 
+  and (orientation: portrait),
+    (max-device-width: 480px){
+    
+    .movie-box{
+    margin: 0 1vw 0 0;
+    width: 36vw;   
+    }
+    
+    .movie-title{
+    font-size: 13px;
+    }
+
+    
+    .movie-detail{
+    font-size: 9px;
+    }
+    
+    .movie-icon{
+    margin: 2vw;
+    width: 6vw;
+    }
+       
+}

@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Collection</title>
+    <link rel="stylesheet" type="text/css" href="movies.css" />
+    <link rel="mask-icon" href="safari.svg" color="black">
+    <script src="movies.js"></script>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#000000">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+    
+<body>
+<script></script>
+
+    <div id="top-bar">
+        <div class="top-title-box">        
+            <p class="top-title">MOVIE COLLECTION</p>
+        </div>
+        <div id="top-search-box">
+            <input type="text" id="search1" onkeyup="search1()"  placeholder="Search by actor, director or movie..." title="Type in a movie">
+        </div>
+    </div>
+    
+    <div id="block"></div>
+    
+    <a id="banner-link" href="https://1drv.ms/v/s!AguK73hSjArpjapY41tPJSIw1iPypg?e=dMWLCm">
+        <div id="banner">
+            <div id="banner-title-box">
+                <p id="banner-title">2OO1: A SPACE ODYSSEY</p>
+            </div>
+        </div>
+    </a>
+    
+    <p id="search-results">Search Results</p>
+    
+    <div id="button-box">
+        <button class="buttons" id="view-genres">Genres</button><button class="buttons" id="view-all" onclick="sortList()">All (Beta)</button>
+    </div>
+          
+<div id="content">
+
+    <p class="content-title">Featured Critically Acclaimed Movies</p>
+    
+    <div class="content-row">
+
+        <div class="movie-box">
+            <img src="posters/catchme.jpg" class="movie-poster">
+            <a href="https://www.youtube.com/embed/p1Fbf358i7I">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Catch Me If You Can</p>
+                        <p class="movie-detail">Steven Spielberg</p>
+                        <p class="movie-detail">2002</p>
+                        <p class="movie-detail">Biographical/Crime</p>
+                        <p class="movie-detail">2 hours 21 minutes</p> 
+                        <p class="movie-detail-hidden">Leonardo DiCaprio, Tom Hanks, Christopher Walken, Martin Sheen</p>
+                    </div>
+                    <img src="icons/youtube.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/clockwork.jpg" class="movie-poster">
+            <a href="https://www.amazon.co.uk/gp/video/detail/B00FFIID88/ref=atv_yv_hom_c_unkc_1_1">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Clockwork Orange<span style="float: left;">A</span></p>
+                        <p class="movie-detail">Stanley Kubrick</p>
+                        <p class="movie-detail">1971</p>
+                        <p class="movie-detail">Dystopian</p>
+                        <p class="movie-detail">2 hours 11 minutes</p> 
+                        <p class="movie-detail-hidden">Malcolm McDowell, Patrick Magee, Michael Bates, Philip Stone</p>
+                    </div>
+                    <img src="icons/prime.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/18.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/mulholland.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Mulholland Drive</p>
+                        <p class="movie-detail">David Lynch</p>
+                        <p class="movie-detail">2001</p>
+                        <p class="movie-detail">Neo-Noir/Psychological Thriller</p>
+                        <p class="movie-detail">2 hours 27 minutes</p> 
+                        <p class="movie-detail-hidden">Naomi Watts, Laura Harring, Justin Theroux</p>
+                    </div>
+                    <img src="icons/blu-ray.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/15.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/pulp.jpg" class="movie-poster">
+            <a href="https://www.youtube.com/embed/l37CMUicZFM">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Pulp Fiction</p>
+                        <p class="movie-detail">Quentin Tarantino</p>
+                        <p class="movie-detail">1994</p>
+                        <p class="movie-detail">Crime</p>
+                        <p class="movie-detail">2 hours 34 minutes</p> 
+                        <p class="movie-detail-hidden">John Travolta, Uma Thurman, Samuel L. Jackson, Bruce Willis</p>
+                    </div>
+                    <img src="icons/youtube.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/18.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/shawshank.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">The Shawshank Redemption</p>
+                        <p class="movie-detail">Frank Darabont</p>
+                        <p class="movie-detail">1994</p>
+                        <p class="movie-detail">Crime/Drama</p>
+                        <p class="movie-detail">2 hours 16 minutes</p> 
+                        <p class="movie-detail-hidden">Tim Robbins, Morgan Freeman</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/15.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/shining.jpg" class="movie-poster">
+            <a href="https://www.amazon.co.uk/Shining-Jack-Nicholson/dp/B00HQFFNRW/ref=sr_1_1?crid=3IBY48U5XYM5M&keywords=the+shining&qid=1564929673&s=instant-video&sprefix=the+shi%2Cinstant-video%2C151&sr=1-1">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">The Shining</p>
+                        <p class="movie-detail">Stanley Kubrick</p>
+                        <p class="movie-detail">1980</p>
+                        <p class="movie-detail">Horror</p>
+                        <p class="movie-detail">1 hour 59 minutes</p> 
+                        <p class="movie-detail-hidden">Jack Nicholson, Shelley Duvall, Danny Lloyd</p>
+                    </div>
+                    <img src="icons/prime.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/15.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/blood.jpg" class="movie-poster">
+            <a href="https://www.youtube.com/embed/XcdvukPJcW8">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">There Will Be Blood</p>
+                        <p class="movie-detail">Paul Thomas Anderson</p>
+                        <p class="movie-detail">2007</p>
+                        <p class="movie-detail">Drama/Epic</p>
+                        <p class="movie-detail">2 hours 38 minutes</p> 
+                        <p class="movie-detail-hidden">Daniel Day-Lewis, Paul Dano, Dillon Freasier</p>
+                    </div>
+                    <img src="icons/youtube.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/15.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/zulu.jpg" class="movie-poster">
+            <a href="https://1drv.ms/v/s!AguK73hSjArpjapazeP9pHQRBlrNJQ?e=aNs4Rh">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Zulu</p>
+                        <p class="movie-detail">Cy Endfield</p>
+                        <p class="movie-detail">1964</p>
+                        <p class="movie-detail">War</p>
+                        <p class="movie-detail">2 hours 18 minutes</p> 
+                        <p class="movie-detail-hidden">Stanley Baker, Jack Hawkins, Jack Hawkins, James Booth, Michael Caine</p>
+                    </div>
+                    <img src="icons/hard-drive.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/pg.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+    </div>
+    
+    <p class="content-title" id="test">Science-Fiction</p>
+    
+    <div class="content-row">
+        <div class="movie-box">
+            <img src="posters/2012.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">2012</p>
+                        <p class="movie-detail">Roland Emmerich</p>
+                        <p class="movie-detail">2009</p>
+                        <p class="movie-detail">Drama/Science-Fiction=</p>
+                        <p class="movie-detail">2 hours 31 minutes</p> 
+                        <p class="movie-detail-hidden">John Cusack, Morgan Lily, Amanda Peet, Chiwetel Ejiofor, Woody Harrelson</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/2001.jpg" class="movie-poster">
+            <a href="https://1drv.ms/v/s!AguK73hSjArpjapY41tPJSIw1iPypg?e=dMWLCm">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">2001: A Space Odyssey</p>
+                        <p class="movie-detail">Stanley Kubrick</p>
+                        <p class="movie-detail">1968</p>
+                        <p class="movie-detail">Science-Fiction</p>
+                        <p class="movie-detail">2 hours 29 minutes</p> 
+                        <p class="movie-detail-hidden">Keir Dullea, Douglas Rain, Gary Lockwood</p>
+                    </div>
+                    <img src="icons/hard-drive.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/u.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/arrival.jpeg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Arrival</p>
+                        <p class="movie-detail">Denis Villeneuve</p>
+                        <p class="movie-detail">2016</p>
+                        <p class="movie-detail">Drama/Science-Fiction</p>
+                        <p class="movie-detail">1 hour 56 minutes</p> 
+                        <p class="movie-detail-hidden">Amy Adams, Jeremy Renner, Forest Whitaker</p>
+                    </div>
+                    <img src="icons/blu-ray.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12a.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/avatar.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Avatar</p>
+                        <p class="movie-detail">James Cameron</p>
+                        <p class="movie-detail">2009</p>
+                        <p class="movie-detail">Fantasy/Science-Fiction</p>
+                        <p class="movie-detail">2 hours 50 minutes</p> 
+                        <p class="movie-detail-hidden">Sam Worthington, Zoe Saldana, Sigourney Weaver</p>
+                        <p class="movie-detail">Collector's Extended Cut</p> 
+                    </div>
+                    <img src="icons/blu-ray.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/district.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">District 9</p>
+                        <p class="movie-detail">Neill Blomkamp</p>
+                        <p class="movie-detail">2009</p>
+                        <p class="movie-detail">Action/Science-Fiction</p>
+                        <p class="movie-detail">1 hour 52 minutes</p> 
+                        <p class="movie-detail-hidden">Sharlto Copley, Jason Cope, Louis Minnaar</p>
+                    </div>
+                    <img src="icons/blu-ray.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/15.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/gravity.jpg" class="movie-poster">
+            <a href="https://www.youtube.com/embed/vqLInEywivE">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Gravity</p>
+                        <p class="movie-detail">Alfonso Cuaron</p>
+                        <p class="movie-detail">2013</p>
+                        <p class="movie-detail">Science-Fiction</p>
+                        <p class="movie-detail">1 hour 30 minutes</p> 
+                        <p class="movie-detail-hidden">George Clooney, Sandra Bullock</p>
+                    </div>
+                    <img src="icons/youtube.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/interstellar.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Interstellar</p>
+                        <p class="movie-detail">Christopher Nolan</p>
+                        <p class="movie-detail">2014</p>
+                        <p class="movie-detail">Science-Fiction</p>
+                        <p class="movie-detail">2 hours 49 minutes</p> 
+                        <p class="movie-detail-hidden">Matthew McConaughey, Anne Hathaway, Jessica Chastain, Michael Caine, Mackenzie Foy, Matt Damon, Casey Affleck</p>
+                    </div>
+                    <img src="icons/blu-ray.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/maze.jpg" class="movie-poster">
+            <a href="https://www.youtube.com/embed/XMV3xsQwx5o">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">The Maze Runner</p>
+                        <p class="movie-detail">Wes Ball</p>
+                        <p class="movie-detail">2014</p>
+                        <p class="movie-detail">Dystopian/Science-Fiction</p>
+                        <p class="movie-detail">1 hour 53 minutes</p>   
+                        <p class="movie-detail-hidden">Dylan O'Brien, Thomas Brodie-Sangster, Kaya Scodelario, Will Poulter</p>
+                        <p class="movie-detail">Extended Edition</p>
+                    </div>
+                    <img src="icons/youtube.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/15.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/rememory.jpg" class="movie-poster">
+            <a href="https://www.youtube.com/embed/rsV9kJRIluM">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Rememory</p>
+                        <p class="movie-detail">Mark Palansky</p>
+                        <p class="movie-detail">2017</p>
+                        <p class="movie-detail">Mystery/Science-Fiction</p>
+                        <p class="movie-detail">1 hour 52 minutes</p> 
+                        <p class="movie-detail-hidden">Peter Dinklage, Julia Ormond, Martin Donovan</p>
+                    </div>
+                    <img src="icons/youtube.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/things.jpg" class="movie-poster">
+            <a href="https://1drv.ms/v/s!AguK73hSjArpjawMyT2qcS2K-OV7NQ?e=6rxZE4">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Things to Come</p>
+                        <p class="movie-detail">Stanley Donen</p>
+                        <p class="movie-detail">1936</p>
+                        <p class="movie-detail">Science-Fiction</p>
+                        <p class="movie-detail">1 hour 36 minutes</p> 
+                        <p class="movie-detail-hidden">Raymond Massey, Edward Chapman, 	Ralph Richardson, Margaretta Scott</p>
+                    </div>
+                    <img src="icons/hard-drive.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/pg.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+    </div>
+    
+    <p class="content-title">World Cinema</p>
+    
+    <div class="content-row">
+        <div class="movie-box">
+            <img src="posters/blue.jpg" class="movie-poster">
+            <a href="https://www.amazon.co.uk/gp/video/detail/B00KB5HUK2/ref=atv_yv_hom_c_unkc_1_1">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Blue is the Warmest Colour</p>
+                        <p class="movie-detail">Abdellatif Kechiche</p>
+                        <p class="movie-detail">2013</p>
+                        <p class="movie-detail">Romance</p>
+                        <p class="movie-detail">3 hours 0 minutes</p> 
+                        <p class="movie-detail-hidden">Adele Exarchopoulos, Lea Seydoux</p>
+                        <p class="movie-detail">French</p>
+                    </div>
+                    <img src="icons/prime.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/18.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/handmaiden.jpg" class="movie-poster">
+            <a href="https://www.youtube.com/embed/GAlMC-gcfqU">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">The Handmaiden</p>
+                        <p class="movie-detail">Park Chan-wook</p>
+                        <p class="movie-detail">2017</p>
+                        <p class="movie-detail">Psychological Thriller</p>
+                        <p class="movie-detail">2 hours 48 minutes</p>   
+                        <p class="movie-detail-hidden">Minhee Kim, Tae Ri Kim, Jung-woo Ha, Jin-woong Jo</p>
+                        <p class="movie-detail">Extended Edition</p>
+                        <p class="movie-detail">Korean</p>
+                    </div>
+                    <img src="icons/youtube.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/18.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/oldboy.jpg" class="movie-poster">
+            <a href="https://www.youtube.com/embed/x4Uil51XN-c">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Oldboy</p>
+                        <p class="movie-detail">Park Chan-wook</p>
+                        <p class="movie-detail">2003</p>
+                        <p class="movie-detail">Mystery/Thriller</p>
+                        <p class="movie-detail">2 hours 0 minutes</p>  
+                        <p class="movie-detail-hidden">Choi min-sik, Kang Hye-jung Yoo Ji-Tae</p>
+                        <p class="movie-detail">Korean</p>
+                    </div>
+                    <img src="icons/youtube.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/18.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/pans.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Pan's Labyrinth</p>
+                        <p class="movie-detail">Guillermo del Toro</p>
+                        <p class="movie-detail">2006</p>
+                        <p class="movie-detail">Dark Fantasy/Historical Drama</p>
+                        <p class="movie-detail">1 hour 58 minutes</p>  
+                        <p class="movie-detail-hidden">Ivana Baquero, Doug Jones, Sergi López</p>
+                        <p class="movie-detail">Spanish</p>
+                    </div>
+                    <img src="icons/blu-ray.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/15.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/parasite.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Parasite</p>
+                        <p class="movie-detail">Bong Joon-ho</p>
+                        <p class="movie-detail">2019</p>
+                        <p class="movie-detail">Thriller</p>
+                        <p class="movie-detail">2 hours 12 minutes</p> 
+                        <p class="movie-detail-hidden">Kang Ho Song, Sun Kyun Lee, Yeo Jeong Cho, Woo Shik Choi, So Dam Park, Jung Eun Lee, Hyae Jin Chang</p>
+                    </div>
+                    <img src="icons/blu-ray.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/15.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/solaris.jpg" class="movie-poster">
+            <a href="https://www.youtube.com/embed/mIVh8C7kkU4">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Solaris</p>
+                        <p class="movie-detail">Andrei Tarkovsky</p>
+                        <p class="movie-detail">1972</p>
+                        <p class="movie-detail">Science-Fiction</p>
+                        <p class="movie-detail">2 hours 47 minutes</p>  
+                        <p class="movie-detail-hidden">Donatas Banionis, Natalya Bondarchuk</p>
+                        <p class="movie-detail">Russian</p>
+                    </div>
+                    <img src="icons/youtube.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12a.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/stalker.jpg" class="movie-poster">
+            <a href="https://www.youtube.com/embed/9nm8wrcWh0Y">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Stalker</p>
+                        <p class="movie-detail">Andrei Tarkovsky</p>
+                        <p class="movie-detail">1980</p>
+                        <p class="movie-detail">Science-Fiction</p>
+                        <p class="movie-detail">2 hours 42 minutes</p>  
+                        <p class="movie-detail-hidden">Aleksandr Kaydanovskiy, Anatoliy Solonitsyn, Nikolay Grinko, Alisa Freyndlikh</p>
+                        <p class="movie-detail">Russian</p>
+                    </div>
+                    <img src="icons/youtube.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/pg.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+    </div>
+    
+    <p class="content-title">Crime, Mystery and Thrillers</p>
+    
+    <div class="content-row">
+        <div class="movie-box">
+            <img src="posters/steps.jpg" class="movie-poster">
+            <a href="https://1drv.ms/v/s!AguK73hSjArpjapbUhI-v4saLTE5-w?e=RDNw8p">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">The 39 Steps</p>
+                        <p class="movie-detail">Alfred Hitchcock</p>
+                        <p class="movie-detail">1935</p>
+                        <p class="movie-detail">Mystery/Thriller</p>
+                        <p class="movie-detail">1 hour 27 minutes</p> 
+                        <p class="movie-detail-hidden">Robert Donat, Madeleine Carroll, Wylie Watson</p>
+                    </div>
+                    <img src="icons/hard-drive.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/u.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/casino.png" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Casino Royale</p>
+                        <p class="movie-detail">Martin Campbell</p>
+                        <p class="movie-detail">2006</p>
+                        <p class="movie-detail">Spy/Thriller</p>
+                        <p class="movie-detail">2 hours 18 minutes</p> 
+                        <p class="movie-detail-hidden">Robert Donat, Madeleine Carroll, Wylie Watson</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/15.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/charade.jpg" class="movie-poster">
+            <a href="https://1drv.ms/v/s!AguK73hSjArpjapXWmgKdABrteaOsw?e=0HqEhd">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Charade</p>
+                        <p class="movie-detail">Stanley Donen</p>
+                        <p class="movie-detail">1963</p>
+                        <p class="movie-detail">Mystery/Thriller</p>
+                        <p class="movie-detail">1 hour 53 minutes</p> 
+                        <p class="movie-detail-hidden">Audrey Hepburn, Cary Grant, Walter Matthau, James Coburn, George Kennedy</p>
+                    </div>
+                    <img src="icons/hard-drive.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/pg.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/vinci.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">The Da Vinci Code</p>
+                        <p class="movie-detail">Ron Howard</p>
+                        <p class="movie-detail">2006</p>
+                        <p class="movie-detail">Mystery/Thriller</p>
+                        <p class="movie-detail">2 hours 22 minutes</p> 
+                        <p class="movie-detail-hidden">Tom Hanks, Audrey Tautou, Paul Bettany, Ian McKellen</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/15.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/rises.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">The Dark Knight Rises</p>
+                        <p class="movie-detail">Christopher Nolan</p>
+                        <p class="movie-detail">2012</p>
+                        <p class="movie-detail">Action/Superhero</p>
+                        <p class="movie-detail">2 hours 40 minutes</p> 
+                        <p class="movie-detail-hidden">Christian Bale, Tom Hardy, Anne Hathaway, Joseph Gordon-Levitt, Gary Oldman, Michael Caine, Morgan Freeman, Cillian Murphy</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/fast1.jpg" class="movie-poster">
+            <a href="https://www.youtube.com/embed/MeSnSyYOHdE">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">The Fast and the Furious</p>
+                        <p class="movie-detail">Rob Cohen</p>
+                        <p class="movie-detail">2001</p>
+                        <p class="movie-detail">Action/Thriller</p>
+                        <p class="movie-detail">1 hour 47 minutes</p> 
+                        <p class="movie-detail-hidden">Paul Walker, Vin Diesel, Michelle Rodriguez, Jordana Brewster</p>
+                    </div>
+                    <img src="icons/youtube.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/15.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/budapest.jpg" class="movie-poster">
+            <a href="https://www.youtube.com/embed/6NbVijUb7cA">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">The Grand Budapest Hotel</p>
+                        <p class="movie-detail">Wes Anderson</p>
+                        <p class="movie-detail">2004</p>
+                        <p class="movie-detail">Crime/Drama</p>
+                        <p class="movie-detail">1 hour 40 minutes</p> 
+                        <p class="movie-detail-hidden">Ralph Fiennes, Saoirse Ronan, Bill Murray, Edward Norton, Willem Dafoe, Tilda Swinton, Adrien Brody, Jeff Goldblum</p>
+                    </div>
+                    <img src="icons/youtube.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/15.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/nightcrawler.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Nightcrawler</p>
+                        <p class="movie-detail">Dan Gilroy</p>
+                        <p class="movie-detail">2014</p>
+                        <p class="movie-detail">Thriller</p>
+                        <p class="movie-detail">1 hour 57 minutes</p> 
+                        <p class="movie-detail-hidden">Jake Gyllenhaal, Rene Russo, Riz Ahmed</p>
+                    </div>
+                    <img src="icons/blu-ray.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/15.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/hollywood.jpg" class="movie-poster">
+            <a href="https://www.youtube.com/embed/rwBkQnps-x8">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Once Upon a Time... in Hollywood</p>
+                        <p class="movie-detail">Quentin Tarantino</p>
+                        <p class="movie-detail">2019</p>
+                        <p class="movie-detail">Crime/Drama</p>
+                        <p class="movie-detail">2 hours 41 minutes</p> 
+                        <p class="movie-detail-hidden">Al Pacino, Austin Butler, Brad Pitt, Bruce Dern, Dakota Fanning, Damian Lewis, Emile Hirsch, Julia Butters, Leonardo DiCaprio, Luke Perry, Margaret Qualley, Margot Robbie, Mike Moh, Timothy Olyphant</p>
+                    </div>
+                    <img src="icons/youtube.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/18.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/searching.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Searching</p>
+                        <p class="movie-detail">Aneesh Chaganty</p>
+                        <p class="movie-detail">2018</p>
+                        <p class="movie-detail">Mystery/Thriller</p>
+                        <p class="movie-detail">1 hour 42 minutes</p> 
+                        <p class="movie-detail-hidden">John Cho, Debra Messing, Sara Sohn</p>
+                    </div>
+                    <img src="icons/blu-ray.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/water.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">The Shape of Water</p>
+                        <p class="movie-detail">Guillermo del Toro</p>
+                        <p class="movie-detail">2016</p>
+                        <p class="movie-detail">Dark Fantasy/Romance</p>
+                        <p class="movie-detail">1 hour 58 minutes</p> 
+                        <p class="movie-detail-hidden">Sally Hawkins, Octavia Spencer, Doug Jones, Michael Shannon</p>
+                    </div>
+                    <img src="icons/blu-ray.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/15.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/holmes.jpg" class="movie-poster">
+            <a href="https://www.youtube.com/embed/Iw_TK5N4bu8">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Sherlock Holmes</p>
+                        <p class="movie-detail">Guy Ritchie</p>
+                        <p class="movie-detail">2009</p>
+                        <p class="movie-detail">Action/Mystery/Period</p>
+                        <p class="movie-detail">2 hours 8 minutes</p> 
+                        <p class="movie-detail-hidden">Robert Downey, Jr., Jude Law, Rachel McAdams, Mark Strong, Kelly Reilly, Eddie Marsan</p>
+                    </div>
+                    <img src="icons/youtube.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/shutter.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Shutter Island</p>
+                        <p class="movie-detail">Martin Scorsese</p>
+                        <p class="movie-detail">2010</p>
+                        <p class="movie-detail">Neo-Noir/Psychological Thriller</p>
+                        <p class="movie-detail">2 hours 18 minutes</p> 
+                        <p class="movie-detail-hidden">Leonard Di Caprio, Ben Kingsley, Mark Ruffalo</p>
+                    </div>
+                    <img src="icons/blu-ray.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/15.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/spectre.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Spectre</p>
+                        <p class="movie-detail">Sam Mendes</p>
+                        <p class="movie-detail">2015</p>
+                        <p class="movie-detail">Spy/Thriller</p>
+                        <p class="movie-detail">2 hours 22 minutes</p> 
+                        <p class="movie-detail-hidden">Daniel Craig, Léa Seydoux, Christoph Waltz, Monica Bellucci, Naomie Harris, Ralph Fiennes, Ben Whishaw, Andrew Scott, Dave Bautista, Rory Kinnear</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+    </div>
+    
+    <p class="content-title">History, Politics and War</p>
+    
+    <div class="content-row">
+        <div class="movie-box">
+            <img src="posters/apocalypse.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Apocalypse Now</p>
+                        <p class="movie-detail">Francis Ford Coppola</p>
+                        <p class="movie-detail">1979</p>
+                        <p class="movie-detail">Historical Epic/War</p>
+                        <p class="movie-detail">2 hours 33 minutes</p> 
+                        <p class="movie-detail-hidden">Martin Sheen, Marlon Brando, Robert Duvall, Laurence Fishburne, Harrison Ford</p>
+                        <p class="movie-detail">2001 Redux Version</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/15.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/stalin.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">The Death of Stalin</p>
+                        <p class="movie-detail">Armando Iannucci</p>
+                        <p class="movie-detail">2017</p>
+                        <p class="movie-detail">Comedy/Drama</p>
+                        <p class="movie-detail">1 hour 46 minutes</p> 
+                        <p class="movie-detail-hidden">Steve Buscemi, Jeffrey Tambor, Jason Isaacs, Michael Palin, Simon Russell Beale</p>
+                    </div>
+                    <img src="icons/blu-ray.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/15.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/strangelove.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb</p>
+                        <p class="movie-detail">Stanley Kubrick</p>
+                        <p class="movie-detail">1964</p>
+                        <p class="movie-detail">Comedy/Drama</p>
+                        <p class="movie-detail">1 hour 35 minutes</p> 
+                        <p class="movie-detail-hidden">Peter Sellers, George C. Scott</p>
+                    </div>
+                    <img src="icons/blu-ray.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/pg.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/escape.jpg" class="movie-poster">
+            <a href="https://1drv.ms/v/s!AguK73hSjArpjapZDLv0_9CxTeL3Tg?e=q1TrVI">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">The Great Escape</p>
+                        <p class="movie-detail">John Sturges</p>
+                        <p class="movie-detail">1963</p>
+                        <p class="movie-detail">Historical Epic/War</p>
+                        <p class="movie-detail">2 hours 45 minutes</p> 
+                        <p class="movie-detail-hidden">Steve McQueen, James Garner, Richard Attenborough, James Donald, Charles Bronson, Donald Pleasence, James Coburn, Hannes Messemer, David McCallum, 	Gordon Jackson, John Leyton, Angus Lennie, Nigel Stock, 	Robert Graf</p>
+                    </div>
+                    <img src="icons/hard-drive.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/pg.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/hacksaw.jpg" class="movie-poster">
+             <a href="https://www.youtube.com/embed/RfeKIO2VBsI">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Hacksaw Ridge</p>
+                        <p class="movie-detail">Mel Gibson</p>
+                        <p class="movie-detail">2017</p>
+                        <p class="movie-detail">War</p>
+                        <p class="movie-detail">2 hours 19 minutes</p> 
+                        <p class="movie-detail-hidden">Andrew Garfield, Sam Worthington, Luke Bracey, Teresa Palmer, Hugo Weaving, Rachel Griffiths, Vince Vaughn</p>
+                    </div>
+                    <img src="icons/youtube.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/15.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/arabia.jpg" class="movie-poster">
+            <a href="https://www.amazon.co.uk/Lawrence-Arabia-Restored-Version-OToole/dp/B00FZR8F3C/ref=sr_1_1?keywords=Lawrence+of+arabia&qid=1565636379&s=instant-video&sr=1-1">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Lawrence of Arabia</p>
+                        <p class="movie-detail">David Lean</p>
+                        <p class="movie-detail">1962</p>
+                        <p class="movie-detail">Historical Epic</p>
+                        <p class="movie-detail">3 hours 47 minutes</p> 
+                        <p class="movie-detail-hidden">Peter O'Toole, Omar Sharif, Alec Guinness, Anthony Quinn</p>
+                        <p class="movie-detail">Restored Version</p>
+                    </div>
+                    <img src="icons/prime.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/pg.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/pianist.jpg" class="movie-poster">
+             <a href="https://www.youtube.com/embed/oBllNQ90atk">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">The Pianist</p>
+                        <p class="movie-detail">Roman Polanski</p>
+                        <p class="movie-detail">2002</p>
+                        <p class="movie-detail">Drama/Historical/War</p>
+                        <p class="movie-detail">2 hours 29 minutes</p> 
+                        <p class="movie-detail-hidden">Adrien Brody, Emilia Fox, Maureen Lipman</p>
+                    </div>
+                    <img src="icons/youtube.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/15.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+    </div>
+    
+    <p class="content-title">Adventure</p>
+    
+    <div class="content-row">
+        <div class="movie-box">
+            <img src="posters/gladiator.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Gladiator</p>
+                        <p class="movie-detail">Ridley Scott</p>
+                        <p class="movie-detail">2001</p>
+                        <p class="movie-detail">Action/Adventure</p>
+                        <p class="movie-detail">2 hours 50 minutes</p> 
+                        <p class="movie-detail-hidden">Russel Crowe, Joaquin Phoenix, Derek Jacobi</p>
+                        <p class="movie-detail">Extended Edition</p>
+                    </div>
+                    <img src="icons/blu-ray.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/15.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/kingdom.jpeg" class="movie-poster">
+            <a href="https://1drv.ms/v/s!AguK73hSjArpjawNCB5PLQtp9hGhWA?e=oO9tX3">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Kingdom of Heaven</p>
+                        <p class="movie-detail">Ridley Scott</p>
+                        <p class="movie-detail">2005</p>
+                        <p class="movie-detail">Adventure/Historical Epic</p>
+                        <p class="movie-detail">3 hours 10 minutes</p> 
+                        <p class="movie-detail-hidden">Orlando Bloom, Eva Green, Jeremy Irons, David Thewlis, Brendan Gleeson, Marton Csokas, Liam Neeson</p>
+                        <p class="movie-detail">Director's Cut</p>
+                    </div>
+                    <img src="icons/hard-drive.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/15.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/fellowship.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">The Lord of the Rings: The Fellowship of the Ring</p>
+                        <p class="movie-detail">Peter Jackson</p>
+                        <p class="movie-detail">2001</p>
+                        <p class="movie-detail">Adventure/Fantasy</p>
+                        <p class="movie-detail">3 hours 20 minutes</p> 
+                        <p class="movie-detail-hidden">Elijah Wood, Sean Astin, Orlando Bloom, Viggo Mortensen, Ian McKellen, Cate Blanchett, Hugo Weaving, Andy Serkis, Christopher Lee</p>
+                        <p class="movie-detail">Extended Edition</p> 
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/pg.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/twotowers.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">The Lord of the Rings: The Two Towers</p>
+                        <p class="movie-detail">Peter Jackson</p>
+                        <p class="movie-detail">2002</p>
+                        <p class="movie-detail">Adventure/Fantasy</p>
+                        <p class="movie-detail">3 hours 34 minutes</p> 
+                        <p class="movie-detail-hidden">Elijah Wood, Sean Astin, Orlando Bloom, Viggo Mortensen, Ian McKellen, Cate Blanchett, Hugo Weaving, Andy Serkis, Christopher Lee</p>
+                        <p class="movie-detail">Extended Edition</p> 
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/returnking.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">The Lord of the Rings: The Return of the King</p>
+                        <p class="movie-detail">Peter Jackson</p>
+                        <p class="movie-detail">2003</p>
+                        <p class="movie-detail">Adventure/Fantasy</p>
+                        <p class="movie-detail">4 hours 0 minutes</p> 
+                        <p class="movie-detail-hidden">Elijah Wood, Sean Astin, Orlando Bloom, Viggo Mortensen, Ian McKellen, Cate Blanchett, Hugo Weaving, Andy Serkis, Christopher Lee</p>
+                        <p class="movie-detail">Extended Edition</p> 
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/chest.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Pirates of the Caribbean: Dead Man's Chest</p>
+                        <p class="movie-detail">Gore Verbinski</p>
+                        <p class="movie-detail">2006</p>
+                        <p class="movie-detail">Adventure/Swashbuckler</p>
+                        <p class="movie-detail">2 hours 25 minutes</p> 
+                        <p class="movie-detail-hidden">Johnny Depp, Keira Knightley, Orlando Bloom, Bill Nighy</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/worlds.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Pirates of the Caribbean: At World's End</p>
+                        <p class="movie-detail">Gore Verbinski</p>
+                        <p class="movie-detail">2007</p>
+                        <p class="movie-detail">Adventure/Swashbuckler</p>
+                        <p class="movie-detail">2 hours 41 minutes</p> 
+                        <p class="movie-detail-hidden">Johnny Depp, Keira Knightley, Orlando Bloom, Geoffrey Rush</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/treasure.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Treasure Island</p>
+                        <p class="movie-detail">Steve Barron</p>
+                        <p class="movie-detail">2012</p>
+                        <p class="movie-detail">Adventure/Swashbuckler</p>
+                        <p class="movie-detail">2 hours 58 minutes</p> 
+                        <p class="movie-detail-hidden">Eddie Izzard, Elijah Wood, Donald Sutherland, Philip Glenister, Rupert Penry-Jones</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+    </div>
+    
+    <p class="content-title">Animation and Children's</p>
+    
+    <div class="content-row">
+        <div class="movie-box">
+            <img src="posters/despicable2.png" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Despicable Me 2</p>
+                        <p class="movie-detail">Pierre Coffin, Chris Renaud</p>
+                        <p class="movie-detail">2013</p>
+                        <p class="movie-detail">Comedy</p>
+                        <p class="movie-detail">1 hour 38 minutes</p> 
+                        <p class="movie-detail-hidden">Steve Carell, Kristen Wiig</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/u.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/howls.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Howl's Moving Castle</p>
+                        <p class="movie-detail">Hayao Miyazaki</p>
+                        <p class="movie-detail">2004</p>
+                        <p class="movie-detail">Anime/Fantasy</p>
+                        <p class="movie-detail">1 hour 59 minutes</p> 
+                        <p class="movie-detail-hidden">Jean Simmons, Emily Mortimer, Christian Bale, Lauren Bacall</p>
+                    </div>
+                    <img src="icons/blu-ray.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/u.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/ice.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Ice Age</p>
+                        <p class="movie-detail">Chris Wedge</p>
+                        <p class="movie-detail">2002</p>
+                        <p class="movie-detail">Adventure</p>
+                        <p class="movie-detail">1 hour 17 minutes</p> 
+                        <p class="movie-detail-hidden">Ray Romano, John Leguizamo, Denis Leary</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/u.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/legobatman.jpg" class="movie-poster">
+            <a href="https://www.youtube.com/embed/OQN6Xb5EYQ0">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">The Lego Batman Movie</p>
+                        <p class="movie-detail">Chris McKay</p>
+                        <p class="movie-detail">2017</p>
+                        <p class="movie-detail">Superhero</p>
+                        <p class="movie-detail">1 hour 44 minutes</p> 
+                        <p class="movie-detail-hidden">Will Arnett, Michael Cera, Rosario Dawson, Zach Galifianakis</p>
+                    </div>
+                    <img src="icons/youtube.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/u.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/lego.jpg" class="movie-poster">
+            <a href="https://rakuten.tv/uk/movies/the-lego-movie">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">The Lego Movie</p>
+                        <p class="movie-detail">Chris Miller, Phil Lord</p>
+                        <p class="movie-detail">2014</p>
+                        <p class="movie-detail">Adventure</p>
+                        <p class="movie-detail">1 hour 41 minutes</p> 
+                        <p class="movie-detail-hidden">Chris Pratt, Elizabeth Banks, Will Ferrell, Morgan Freeman, Liam Neeson</p>
+                    </div>
+                    <img src="icons/rakuten.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/u.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/mibthree.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Men in Black 3</p>
+                        <p class="movie-detail">Barry Sonnenfeld</p>
+                        <p class="movie-detail">2012</p>
+                        <p class="movie-detail">Action/Science-Fiction</p>
+                        <p class="movie-detail">1 hour 41 minutes</p> 
+                        <p class="movie-detail-hidden">Will Smith, Tommy Lee Jones, Josh Brolin, Emma Thompson</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/pg.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/totoro.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">My Neighbour Totoro</p>
+                        <p class="movie-detail">Hayao Miyazaki</p>
+                        <p class="movie-detail">1988</p>
+                        <p class="movie-detail">Anime/Fantasy</p>
+                        <p class="movie-detail">1 hour 26 minutes</p> 
+                        <p class="movie-detail-hidden">Dakota Fanning, Elle Fanning, Lea Salonga</p>
+                    </div>
+                    <img src="icons/blu-ray.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/u.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/narnia.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">The Chronicles of Narnia: The Lion, the Witch and the Wardrobe</p>
+                        <p class="movie-detail">Andrew Adamson</p>
+                        <p class="movie-detail">2005</p>
+                        <p class="movie-detail">Fantasy</p>
+                        <p class="movie-detail">2 hours 17 minutes</p> 
+                        <p class="movie-detail-hidden">William Moseley, Tilda Swinton, Skandar Keynes, Anna Popplewell, Georgie Henley</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/pg.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/caspian.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">The Chronicles of Narnia: Prince Caspian</p>
+                        <p class="movie-detail">Andrew Adamson</p>
+                        <p class="movie-detail">2008</p>
+                        <p class="movie-detail">Fantasy</p>
+                        <p class="movie-detail">2 hours 24 minutes</p> 
+                        <p class="movie-detail-hidden">William Moseley, Ben Barnes, Skandar Keynes, Anna Popplewell, Georgie Henley</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/pg.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/museum.jpg" class="movie-poster">
+            <a href="https://www.youtube.com/embed/Zi6Cb75eH6Y">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Night at the Museum</p>
+                        <p class="movie-detail">Shawn Levy</p>
+                        <p class="movie-detail">2006</p>
+                        <p class="movie-detail">Action/Fantasy</p>
+                        <p class="movie-detail">1 hour 49 minutes</p> 
+                        <p class="movie-detail-hidden">Ben Stiller, Robin Williams, Owen Wilson, Ricky Gervais, Rami Malek, Dick Van Dyke, Steve Coogan</p>
+                    </div>
+                    <img src="icons/youtube.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/pg.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/mononoke.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Princess Mononoke</p>
+                        <p class="movie-detail">Hayao Miyazaki</p>
+                        <p class="movie-detail">1997</p>
+                        <p class="movie-detail">Anime/Fantasy</p>
+                        <p class="movie-detail">2 hours 14 minutes</p> 
+                        <p class="movie-detail-hidden">Billy Crudup, Claire Danes, Minnie Driver</p>
+                    </div>
+                    <img src="icons/blu-ray.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/pg.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/spirited.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Spirited Away</p>
+                        <p class="movie-detail">Hayao Miyazaki</p>
+                        <p class="movie-detail">2001</p>
+                        <p class="movie-detail">Anime/Fantasy</p>
+                        <p class="movie-detail">2 hours 4 minutes</p> 
+                        <p class="movie-detail-hidden">Daveigh Chase, Jason Marsden, Suzanne Pleshette</p>
+                    </div>
+                    <img src="icons/blu-ray.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/pg.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+    </div>
+    
+    <p class="content-title"><span style="font-family: harry-potter;">Harry Potter</span></p>
+    
+    <div class="content-row">
+        <div class="movie-box">
+            <img src="posters/hp1.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Harry Potter and the Philosopher's Stone</p>
+                        <p class="movie-detail">Chris Columbus</p>
+                        <p class="movie-detail">2001</p>
+                        <p class="movie-detail">Fantasy</p>
+                        <p class="movie-detail">2 hours 27 minutes</p>  
+                        <p class="movie-detail-hidden">Daniel Radcliffe, Emma Watson, Rupert Grint, Michael Gambon, Robbie Coltrane, Tom Felton, Oliver Phelps, James Phelps, Bonnie Wright, Warwick Davis, Maggie Smith, Robbie Coltrane, Joshua Herdman, Matthew Lewis, Jamie Waylett, Alan Rickman, Ian Hart, Sean Biggerstaff, Chris Rankin, Zoe Wanamaker, David Bradley</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/pg.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/hp2.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Harry Potter and the Chamber of Secrets</p>
+                        <p class="movie-detail">Chris Columbus</p>
+                        <p class="movie-detail">2002</p>
+                        <p class="movie-detail">Fantasy</p>
+                        <p class="movie-detail">2 hours 34 minutes</p>  
+                        <p class="movie-detail-hidden">Daniel Radcliffe, Emma Watson, Rupert Grint, Michael Gambon, Robbie Coltrane, Tom Felton, Oliver Phelps, James Phelps, Bonnie Wright, Warwick Davis, Maggie Smith, Robbie Coltrane, Joshua Herdman, Matthew Lewis, Jamie Waylett, Alan Rickman, Sean Biggerstaff, Chris Rankin, Jason Isaacs</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/pg.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/hp3.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Harry Potter and the Prisoner of Azkaban</p>
+                        <p class="movie-detail">Alfonso Cuaró
+                        on</p>
+                        <p class="movie-detail">2004</p>
+                        <p class="movie-detail">Fantasy</p>
+                        <p class="movie-detail">2 hours 16 minutes</p>  
+                        <p class="movie-detail-hidden">Daniel Radcliffe, Emma Watson, Rupert Grint, Michael Gambon, Robbie Coltrane, Tom Felton, Oliver Phelps, James Phelps, Bonnie Wright, Warwick Davis, Maggie Smith, Robbie Coltrane, Joshua Herdman, Matthew Lewis, Jamie Waylett, Alan Rickman, David Bradley, Gary Oldman, Timothy Spall, David Thewlis</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/pg.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/hp4.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Harry Potter and the Goblet of Fire</p>
+                        <p class="movie-detail">Mike Newell</p>
+                        <p class="movie-detail">2005</p>
+                        <p class="movie-detail">Fantasy</p>
+                        <p class="movie-detail">2 hours 31 minutes</p>  
+                        <p class="movie-detail-hidden">Daniel Radcliffe, Emma Watson, Rupert Grint, Michael Gambon, Robbie Coltrane, Tom Felton, Oliver Phelps, James Phelps, Bonnie Wright, Warwick Davis, Maggie Smith, Alan Rickman, David Bradley, Jason Isaacs, Gary Oldman, Timothy Spall, Robert Pattinson, David Tennant, Roger Lloyd-Pack, Brendan Gleeson, Clemence Poesy, Stanislav Ianevski, Frances de la Tour, Miranda Richardson, Katie Leung</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/hp5.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Harry Potter and the Order of the Phoenix</p>
+                        <p class="movie-detail">David Yates</p>
+                        <p class="movie-detail">2007</p>
+                        <p class="movie-detail">Fantasy</p>
+                        <p class="movie-detail">2 hours 12 minutes</p>  
+                        <p class="movie-detail-hidden">Daniel Radcliffe, Emma Watson, Rupert Grint, Michael Gambon, Robbie Coltrane, Tom Felton, Oliver Phelps, James Phelps, Bonnie Wright, Warwick Davis, Maggie Smith, Robbie Coltrane, Joshua Herdman, Matthew Lewis, Jamie Waylett, Alan Rickman, Chris Rankin, David Bradley, Jason Isaacs, Gary Oldman, Timothy Spall, David Thewlis, Imelda Staunton, Helena Bonham Carter, Evanna Lynch, Natalia Tena, Brendan Gleeson, Katie Leung</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/hp6.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Harry Potter and the Half-Blood Prince</p>
+                        <p class="movie-detail">David Yates</p>
+                        <p class="movie-detail">2009</p>
+                        <p class="movie-detail">Fantasy</p>
+                        <p class="movie-detail">2 hours 27 minutes</p>  
+                        <p class="movie-detail-hidden">Daniel Radcliffe, Emma Watson, Rupert Grint, Michael Gambon, Robbie Coltrane, Tom Felton, Oliver Phelps, James Phelps, Bonnie Wright, Warwick Davis, Maggie Smith, Robbie Coltrane, Joshua Herdman, Matthew Lewis, Jamie Waylett, Alan Rickman, David Bradley, Jason Isaacs, Timothy Spall, David Thewlis, Helena Bonham Carter, Evanna Lynch, Natalia Tena, Katie Leung, Suzie Toase, Ralph Ineson, Dave Legeno, Anna Shaffer</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/hp7.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Harry Potter and the Deathly Hallows – Part 1</p>
+                        <p class="movie-detail">David Yates</p>
+                        <p class="movie-detail">2010</p>
+                        <p class="movie-detail">Fantasy</p>
+                        <p class="movie-detail">2 hours 20 minutes</p>  
+                        <p class="movie-detail-hidden">Daniel Radcliffe, Emma Watson, Rupert Grint, Michael Gambon, Robbie Coltrane, Tom Felton, Oliver Phelps, James Phelps, Bonnie Wright, Robbie Coltrane, Joshua Herdman, Matthew Lewis, Jamie Waylett, Alan Rickman, Jason Isaacs, Timothy Spall, David Thewlis, Imelda Staunton, Helena Bonham Carter, Evanna Lynch, Natalia Tena, Brendan Gleeson, Katie Leung, Suzie Toase, Ralph Ineson, Dave Legeno, Anna Shaffer</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/hp8.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Harry Potter and the Deathly Hallows – Part 2</p>
+                        <p class="movie-detail">David Yates</p>
+                        <p class="movie-detail">2011</p>
+                        <p class="movie-detail">Fantasy</p>
+                        <p class="movie-detail">2 hours 10 minutes</p>  
+                        <p class="movie-detail-hidden">Daniel Radcliffe, Emma Watson, Rupert Grint, Michael Gambon, Robbie Coltrane, Tom Felton, Oliver Phelps, James Phelps, Bonnie Wright, Warwick Davis, Maggie Smith, Robbie Coltrane, Joshua Herdman, Matthew Lewis, Jamie Waylett, Alan Rickman, Sean Biggerstaff, Chris Rankin, David Bradley, Jason Isaacs, Gary Oldman, Timothy Spall, David Thewlis, Helena Bonham Carter, Evanna Lynch, Natalia Tena, Katie Leung, Suzie Toase, Ralph Ineson, Dave Legeno, Anna Shaffer</p>
+                    </div>
+                    <img src="icons/blu-ray.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+    </div>
+    
+    <p class="content-title"><span style="font-family: star-wars; margin-left: 10px;"> Star Wars</span></p>
+    
+    <div class="content-row">
+        <div class="movie-box">
+            <img src="posters/sw1.jpg" class="movie-poster">
+            <a href="https://www.amazon.co.uk/gp/video/detail/B00VIZDI78/ref=atv_yv_hom_c_unkc_1_9">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Star Wars: Episode I – The Phantom Menace</p>
+                        <p class="movie-detail">George Lucas</p>
+                        <p class="movie-detail">1999</p>
+                        <p class="movie-detail">Space Opera</p>
+                        <p class="movie-detail">2 hours 16 minutes</p> 
+                        <p class="movie-detail-hidden">Jake Lloyd, Natalie Portman, Liam Neeson, Ewan McGregor, Ian McDiarmid, Samuel L. Jackson</p>
+                    </div>
+                    <img src="icons/prime.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/u.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/sw2.jpg" class="movie-poster">
+            <a href="https://www.amazon.co.uk/gp/video/detail/B00VIYE1I4/ref=atv_yv_hom_c_unkc_1_12">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Star Wars: Episode II – Attack of the Clones</p>
+                        <p class="movie-detail">George Lucas</p>
+                        <p class="movie-detail">2002</p>
+                        <p class="movie-detail">Space Opera</p>
+                        <p class="movie-detail">2 hours 22 minutes</p> 
+                        <p class="movie-detail-hidden">Hayden Christensen, Natalie Portman, Christopher Lee, Ewan McGregor, Ian McDiarmid, Samuel L. Jackson</p>
+                    </div>
+                    <img src="icons/prime.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/pg.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/sw3.jpg" class="movie-poster">
+            <a href="https://www.amazon.co.uk/gp/video/detail/B00VIYEJ4A/ref=atv_yv_hom_c_unkc_1_3">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Star Wars: Episode III – Revenge of the Sith</p>
+                        <p class="movie-detail">George Lucas</p>
+                        <p class="movie-detail">2005</p>
+                        <p class="movie-detail">Space Opera</p>
+                        <p class="movie-detail">2 hours 19 minutes</p> 
+                        <p class="movie-detail-hidden">Hayden Christensen, Natalie Portman, Ewan McGregor, Ian McDiarmid, Samuel L. Jackson</p>
+                    </div>
+                    <img src="icons/prime.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/rogue.jpg" class="movie-poster">
+            <a href="https://www.youtube.com/embed/ACIQaOLoPPQ">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Rogue One: A Star Wars Story</p>
+                        <p class="movie-detail">Gareth Edwards</p>
+                        <p class="movie-detail">2016</p>
+                        <p class="movie-detail">Space-Opera</p>
+                        <p class="movie-detail">2 hours 13 minutes</p> 
+                        <p class="movie-detail-hidden">Felicity Jones, Diego Luna, Riz Ahmed, Ben Mendelsohn, Mads Mikkelsen</p>
+                    </div>
+                    <img src="icons/youtube.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12a.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/sw4.jpg" class="movie-poster">
+            <a href="https://www.amazon.co.uk/gp/video/detail/B00VIZDW3S/ref=atv_yv_hom_c_unkc_1_1">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Star Wars: Episode IV - A New Hope</p>
+                        <p class="movie-detail">George Lucas</p>
+                        <p class="movie-detail">1977</p>
+                        <p class="movie-detail">Space Opera</p>
+                        <p class="movie-detail">2 hours 4 minutes</p> 
+                        <p class="movie-detail-hidden">Mark Hamill, Carrie Fisher, Harrison Ford, Alec Guinness, Peter Cushing</p>
+                    </div>
+                    <img src="icons/prime.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/u.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/sw5.jpg" class="movie-poster">
+            <a href="https://www.amazon.co.uk/gp/video/detail/B00VIZD9AY/ref=atv_yv_hom_c_unkc_1_7">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Star Wars: Episode V - The Empire Strikes Back</p>
+                        <p class="movie-detail">Irvin Kershner</p>
+                        <p class="movie-detail">1980</p>
+                        <p class="movie-detail">Space Opera</p>
+                        <p class="movie-detail">2 hours 7 minutes</p> 
+                        <p class="movie-detail-hidden">Mark Hamill, Carrie Fisher, Harrison Ford, Alec Guinness, Billy Dee Williams</p>
+                    </div>
+                    <img src="icons/prime.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/u.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/sw6.jpg" class="movie-poster">
+            <a href="https://www.amazon.co.uk/gp/video/detail/B00VIYEAGC/ref=atv_yv_hom_c_unkc_1_10">
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Star Wars: Episode VI – Return of the Jedi</p>
+                        <p class="movie-detail">Richard Marquand</p>
+                        <p class="movie-detail">1983</p>
+                        <p class="movie-detail">Space Opera</p>
+                        <p class="movie-detail">2 hours 14 minutes</p> 
+                        <p class="movie-detail-hidden">Mark Hamill, Carrie Fisher, Harrison Ford, Alec Guinness, Billy Dee Williams, James Earl Jones</p>
+                    </div>
+                    <img src="icons/prime.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/u.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+    </div>
+    
+    <p class="content-title">The Twilight Saga</p>
+    
+    <div class="content-row">
+        <div class="movie-box">
+            <img src="posters/tw1.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">Twilight</p>
+                        <p class="movie-detail">Catherine Hardwicke</p>
+                        <p class="movie-detail">2008</p>
+                        <p class="movie-detail">Fantasy/Romance</p>
+                        <p class="movie-detail">1 hour 57 minutes</p> 
+                        <p class="movie-detail-hidden">Kristen Stewart, Robert Pattinson, Taylor Lautner</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/tw2.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">The Twilight Saga: New Moon</p>
+                        <p class="movie-detail">Chris Weitz</p>
+                        <p class="movie-detail">2009</p>
+                        <p class="movie-detail">Fantasy/Romance</p>
+                        <p class="movie-detail">2 hours 7 minutes</p> 
+                        <p class="movie-detail-hidden">Kristen Stewart, Robert Pattinson, Taylor Lautner</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/tw3.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">The Twilight Saga: Eclipse</p>
+                        <p class="movie-detail">David Slade</p>
+                        <p class="movie-detail">2010</p>
+                        <p class="movie-detail">Fantasy/Romance</p>
+                        <p class="movie-detail">1 hour 59 minutes</p> 
+                        <p class="movie-detail-hidden">Kristen Stewart, Robert Pattinson, Taylor Lautner</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/tw4.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">The Twilight Saga: Breaking Dawn – Part 1</p>
+                        <p class="movie-detail">Bill Condon</p>
+                        <p class="movie-detail">2011</p>
+                        <p class="movie-detail">Fantasy/Romance</p>
+                        <p class="movie-detail">2 hours 0 minutes</p> 
+                        <p class="movie-detail-hidden">Kristen Stewart, Robert Pattinson, Taylor Lautner</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+        <div class="movie-box">
+            <img src="posters/tw5.jpg" class="movie-poster">
+            <a>
+                <div class="movie-information">
+                    <div class="movie-details">
+                        <p class="movie-title">The Twilight Saga: Breaking Dawn – Part 2</p>
+                        <p class="movie-detail">Bill Condon</p>
+                        <p class="movie-detail">2012</p>
+                        <p class="movie-detail">Fantasy/Romance</p>
+                        <p class="movie-detail">1 hour 51 minutes</p> 
+                        <p class="movie-detail-hidden">Kristen Stewart, Robert Pattinson, Taylor Lautner</p>
+                    </div>
+                    <img src="icons/dvd.png" class="movie-icon movie-icon-left">
+                    <img src="ratings/12.png" class="movie-icon movie-icon-right"> 
+                </div>
+             </a>
+        </div>
+    </div>
+     
+</div>
+    
+</body>
+    
+</html>

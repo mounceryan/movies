@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Films Owned</title>
+    <link rel="stylesheet" type="text/css" href="films.css" />
+    <link rel="mask-icon" href="safari.svg" color="black">
+    <script src="films.js"></script>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#000000">
+</head>
+    
+<body>
+    
+    <script>
+        
+
+    </script>
+
+    <!--Content Box-->
+
+    <div id="content-box">
+        
+        <!--Sub-Title Box-->  
+        
+        <div class="sub-title-box">
+            <p class="sub-title">Film Collection</p>
+        </div>
+        
+        <div id="search-box">
+            
+            <input type="text" id="search1" onkeyup="search()" placeholder="Search..." title="Type in a film">
+            
+            <p class="size-option" id="size-down" onclick="sizedown()">-</p>
+            <p class="size-option" id="size-up" onclick="sizeup()">+</p>   
+            
+        </div>
+
+        
+    
+        <div id="player-box-container">
+            <div id="player-box">
+                <video id="video" controls>
+                    <source id="source" src="" type="video/mp4">
+                </video>
+            </div>
+            <div id="player-box-youtube">
+                    <iframe id="youtube-video" src="" frameborder="0" color="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div id="player-information-box">
+                <img src="" alt="2001: A Space Odyssey" id="player-poster">
+                <p id="player-close" onclick="closeplayer()">Close Video Player</p>
+            </div>   
+        </div> 
+        
+        <div id="advanced-search">
+            <p id="advanced" onclick="showadvanced()">Advanced Search</p>
+        
+     <div id="advanced-options">
+            
+        <div class="ownership-options">
+            <p class="as-lables">Actor:</p> 
+            <input type="text" class="search" id="search3" onkeyup="actorsearch()" placeholder="Search by actor..." title="Type in a actor">
+        </div>
+            
+        <div class="ownership-options">
+            <p class="as-lables">Director:</p> 
+            <input type="text" class="search" id="search2" onkeyup="directorsearch()" placeholder="Search by director..." title="Type in a director">
+        </div>
+                
+<div class="ownership-options">
+            <p class="as-lables">Platform:</p> 
+        <p class="ownership-option" id="ownership-all" onclick="showall()">All</p>
+        <div class="ownership-option" id="ownership-bluray" onclick="showbluray()">
+            <img src="icons/blu-ray.png" class="film-ownership-image">
+        </div>
+        <div class="ownership-option" id="ownership-dvd" onclick="showdvd()">
+            <img src="icons/dvd.png" class="film-ownership-image">
+        </div>
+        <div class="ownership-option" id="ownership-harddrive" onclick="showharddrive()">
+            <img src="icons/hard-drive.png" class="film-ownership-image">
+        </div>
+        <div class="ownership-option" id="ownership-amazonprimevideo" onclick="showamazonprimevideo()">
+            <img src="icons/prime.png" class="film-ownership-image">
+        </div>
+        <div class="ownership-option" id="ownership-rakutentv" onclick="showrakutenttv()">
+            <img src="icons/rakuten.png" class="film-ownership-image">
+        </div>
+        <div class="ownership-option" id="ownership-youtube" onclick="showyoutube()">
+            <img src="icons/youtube.png" class="film-ownership-image">
+        </div>
+ </div>
+            
+            <div class="ownership-options">
+                    <p class="as-lables">Rating:</p> 
+            <p class="ownership-option" id="ownership-all" onclick="showall()">All</p>
+                    <div class="ownership-option" id="rating-u" onclick="showu()">
+                        <img src="ratings/u.png" class="film-ownership-image">
+                    </div>
+    
+                    <div class="ownership-option" id="rating-pg" onclick="showpg()">
+                        <img src="ratings/pg.png"                    class="film-ownership-image">
+                    </div>
+    
+                    <div class="ownership-option" id="rating-twelvea" onclick="showtwelvea()">
+                        <img src="ratings/12a.png" class="film-ownership-image">
+                    </div>
+    
+                    <div class="ownership-option" id="rating-twelve" onclick="showtwelve()">
+                        <img src="ratings/12.png"                    class="film-ownership-image">
+                    </div>
+    
+                    <div class="ownership-option" id="rating-fifteen" onclick="showfifteen()">
+                        <img src="ratings/15.png" class="film-ownership-image">
+                    </div>
+    
+                    <div class="ownership-option" id="rating-eighteen" onclick="showeighteen()">
+                        <img src="ratings/18.png"                    class="film-ownership-image">
+                    </div>
+                    
+                </div>   
+            
+            <div class="ownership-options">
+                    <p class="as-lables">Score:</p> 
+            <p class="ownership-option" id="ownership-all" onclick="showall()">All</p>
+                    <p class="ownership-option" id="score-five" onclick="showfive()">
+                        5/10
+                    </p>
+                
+                    <p class="ownership-option" id="score-six" onclick="showsix()">
+                        6/10
+                    </p>
+    
+                    <p class="ownership-option" id="score-seven" onclick="showseven()">
+                        7/10
+                    </p>
+    
+                    <p class="ownership-option" id="score-eight" onclick="showeight()">
+                        8/10
+                    </p>
+    
+                    <p class="ownership-option" id="score-nine" onclick="shownine()">
+                        9/10
+                    </p>
+    
+                    <p class="ownership-option" id="score-ten" onclick="showten()">
+                        10/10
+                    </p>
+                    
+                </div> 
+            </div>
+        </div>
+            
+  
+
+
+        <div class="film-box" onmouseover="showinfoboxnew('twelve')" onmouseout="showinfoboxnew('twelve')">
+            <img src="posters/2012.jpg" alt="2012" class="film-poster">
+           <div class="film-information-box" id="fib11">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>  
+                <div class="film-ownership twelve">
+                    <img src="ratings/12.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score six">
+                    <p class="film-score-text">6/10</p>
+                </div>
+                <p class="film-name">2012</p>
+                <p class="film-director">Director: <span>Roland Emmerich</span></p>
+                <p class="film-release">Release Year: <span>2009</span></p>
+                <p class="film-genre">Genre: <span>Science-Fiction/Drama</span></p>
+                <p class="film-actors">Actors: <span>John Cusack, Morgan Lily, Amanda Peet, Chiwetel Ejiofor, Woody Harrelson</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 31 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box pointer" onmouseover="showinfoboxnew('odyssey')" onmouseout="showinfoboxnew('odyssey')">
+            <img src="posters/2001.jpg" alt="2001: A Space Odyssey" class="film-poster" >
+            <div class="film-information-box" id="fib1" onclick="showfilminplayer('odysseylink')">
+                <div class="film-ownership hard-drive">
+                    <img src="icons/hard-drive.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership u">
+                    <img src="ratings/u.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score ten">
+                    <p class="film-score-text">10/10</p>
+                </div>
+                <p class="film-name">2001: A Space Odyssey</p>
+                <p class="film-director">Director: <span>Stanley Kubrick</span></p>
+                <p class="film-release">Release Year: <span>1968</span></p>
+                <p class="film-genre">Genre: <span>Science-Fiction</span></p>
+                <p class="film-actors">Actors: <span>Keir Dullea, Douglas Rain, Gary Lockwood</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 29 minutes</span></p>
+            </div>  
+        </div>
+        
+        <div class="film-box pointer" onmouseover="showinfoboxnew('steps')" onmouseout="showinfoboxnew('steps')">
+            <img src="posters/steps.jpg" alt="The 39 Steps" class="film-poster" >
+            <div class="film-information-box" id="fib61" onclick="showfilminplayer('stepslink')">
+                <div class="film-ownership hard-drive">
+                    <img src="icons/hard-drive.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership u">
+                    <img src="ratings/u.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score eight">
+                    <p class="film-score-text">8/10</p>
+                </div>
+                <p class="film-name">The 39 Steps</p>
+                <p class="film-director">Director: <span>Alfred Hitchcock</span></p>
+                <p class="film-release">Release Year: <span>1935</span></p>
+                <p class="film-genre">Genre: <span>Thriller/Mystery</span></p>
+                <p class="film-actors">Actors: <span>Robert Donat, Madeleine Carroll, Wylie Watson</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 27 minutes</span></p>
+            </div>  
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('apocalypse')" onmouseout="showinfoboxnew('apocalypse')">
+            <img src="posters/apocalypse.jpg" alt="Apocalypse Now" class="film-poster">
+           <div class="film-information-box" id="fib12">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership fifteen">
+                    <img src="ratings/15.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score nine">
+                    <p class="film-score-text">9/10</p>
+                </div>
+                <p class="film-name">Apocalypse Now</p>
+                <p class="film-director">Director: <span>Francis Ford Coppola</span></p>
+                <p class="film-release">Release Year: <span>1979</span></p>
+                <p class="film-genre">Genre: <span>War/Historical Epic</span></p>
+                <p class="film-actors">Actors: <span>Martin Sheen, Marlon Brando, Robert Duvall, Laurence Fishburne, Harrison Ford</span></p>
+                <p class="film-version">Version: <span>2001 Redux</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 33 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('arrival')" onmouseout="showinfoboxnew('arrival')">
+            <img src="posters/arrival.jpeg" alt="Arrival" class="film-poster">
+           <div class="film-information-box" id="fib13">
+                <div class="film-ownership blu-ray">
+                    <img src="icons/blu-ray.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelvea">
+                    <img src="ratings/12a.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score nine">
+                    <p class="film-score-text">9/10</p>
+                </div>
+                <p class="film-name">Arrival</p>
+                <p class="film-director">Director: <span>Denis Villeneuve</span></p>
+                <p class="film-release">Release Year: <span>2016</span></p>
+                <p class="film-genre">Genre: <span>Science-Fiction/Drama</span></p>
+                <p class="film-actors">Actors: <span>Amy Adams, Jeremy Renner, Forest Whitaker</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 56 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('avatar')" onmouseout="showinfoboxnew('avatar')">
+            <img src="posters/avatar.jpg" alt="Avatar" class="film-poster">
+           <div class="film-information-box" id="fib16">
+                <div class="film-ownership blu-ray">
+                    <img src="icons/blu-ray.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelve">
+                    <img src="ratings/12.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score nine">
+                    <p class="film-score-text">9/10</p>
+                </div>
+                <p class="film-name">Avatar</p>
+                <p class="film-director">Director: <span>James Cameron</span></p>
+                <p class="film-release">Release Year: <span>2009</span></p>
+                <p class="film-genre">Genre: <span>Science-Fiction/Fantasy</span></p>
+                <p class="film-actors">Actors: <span>Sam Worthington, Zoe Saldana, Sigourney Weaver</span></p>
+                <p class="film-version">Version: <span>Collector's Extended Cut</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 50 minutes</span></p>
+            </div>
+        </div>
+        
+        <a href="https://www.amazon.co.uk/gp/video/detail/B00KB5HUK2/ref=atv_yv_hom_c_unkc_1_1">
+        <div class="film-box" onmouseover="showinfoboxnew('blue')" onmouseout="showinfoboxnew('blue')">
+            <img src="posters/blue.jpg" alt="Blue is the Warmest Colour" class="film-poster">
+           <div class="film-information-box" id="fib17">
+                <div class="film-ownership prime">
+                    <img src="icons/prime.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership eighteen">
+                    <img src="ratings/18.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score nine">
+                    <p class="film-score-text">9/10</p>
+                </div>
+                <p class="film-name" id="n17">Blue is the Warmest Colour</p>
+                <p class="film-director">Director: <span>Abdellatif Kechiche</span></p>
+                <p class="film-release">Release Year: <span>2013</span></p>
+                <p class="film-genre">Genre: <span>Romance</span></p>
+                <p class="film-actors">Actors: <span>Adèle Exarchopoulos, Léa Seydoux</span></p>
+                <p class="film-runtime">Running Time: <span>3 hours 0 minutes</span></p>
+            </div>
+        </div>
+        </a>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('casino')" onmouseout="showinfoboxnew('casino')">
+            <img src="posters/casino.png" alt="Casino Royale" class="film-poster">
+           <div class="film-information-box" id="fib18">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership fifteen">
+                    <img src="ratings/15.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score seven">
+                    <p class="film-score-text">7/10</p>
+                </div>
+                <p class="film-name">Casino Royale</p>
+                <p class="film-director">Director: <span>Martin Campbell</span></p>
+                <p class="film-release">Release Year: <span>2006</span></p>
+                <p class="film-genre">Genre: <span>Spy/Thriller</span></p>
+                <p class="film-actors">Actors: <span>Daniel Craig, Eva Green, Judy Dench, Mads Mikkelsen</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 18 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box pointer" onmouseover="showinfoboxnew('catchme')" onmouseout="showinfoboxnew('catchme')">
+            <img src="posters/catchme.jpg" alt="Catch Me If You Can" class="film-poster">
+           <div class="film-information-box" id="fib75" onclick="showyoutubeinplayer('catchmeyoutubelink')">
+                <div class="film-ownership youtube">
+                    <img src="icons/youtube.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelve">
+                    <img src="ratings/12.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score nine">
+                    <p class="film-score-text">9/10</p>
+                </div>
+                <p class="film-name">Catch Me If You Can</p>
+                <p class="film-director">Director: <span>Steven Spielberg</span></p>
+                <p class="film-release">Release Year: <span>2002</span></p>
+                <p class="film-genre">Genre: <span>Biographical/Crime</span></p>
+                <p class="film-actors">Actors: <span>Leonardo DiCaprio, Tom Hanks, Christopher Walken, Martin Sheen</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 21 minutes</span></p>
+            </div>
+        </div>
+        
+        <a href="https://www.amazon.co.uk/gp/video/detail/B00FFIID88/ref=atv_yv_hom_c_unkc_1_1">
+        <div class="film-box" onmouseover="showinfoboxnew('clockwork')" onmouseout="showinfoboxnew('clockwork')">
+            <img src="posters/clockwork.jpg" alt="A Clockwork Orange" class="film-poster">
+           <div class="film-information-box" id="fib70">
+                <div class="film-ownership prime">
+                    <img src="icons/prime.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership eighteen">
+                    <img src="ratings/18.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score ten">
+                    <p class="film-score-text">10/10</p>
+                </div>
+                <p class="film-name">A Clockwork Orange</p>
+                <p class="film-director">Director: <span>Stanley Kubrick</span></p>
+                <p class="film-release">Release Year: <span>1971</span></p>
+                <p class="film-genre">Genre: <span>Dystopia</span></p>
+                <p class="film-actors">Actors: <span>Malcolm McDowell, Patrick Magee, Michael Bates, Philip Stone</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 11 minutes</span></p>
+            </div>
+        </div>
+        </a>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('vinci')" onmouseout="showinfoboxnew('vinci')">
+            <img src="posters/vinci.jpg" alt="The Da Vinci Code" class="film-poster">
+           <div class="film-information-box" id="fib21">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership fifteen">
+                    <img src="ratings/15.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score seven">
+                    <p class="film-score-text">7/10</p>
+                </div>
+                <p class="film-name">The Da Vinci Code</p>
+                <p class="film-director">Director: <span>Ron Howard</span></p>
+                <p class="film-release">Release Year: <span>2006</span></p>
+                <p class="film-genre">Genre: <span>Mystery/Thriller</span></p>
+                <p class="film-actors">Actors: <span>Tom Hanks, Audrey Tautou, Paul Bettany, Ian McKellen</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 22 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('rises')" onmouseout="showinfoboxnew('rises')">
+            <img src="posters/rises.jpg" alt="The Dark Knight Rises" class="film-poster">
+           <div class="film-information-box" id="fib22">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelve">
+                    <img src="ratings/12.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score eight">
+                    <p class="film-score-text">8/10</p>
+                </div>
+                <p class="film-name">The Dark Knight Rises</p>
+                <p class="film-director">Director: <span>Christopher Nolan</span></p>
+                <p class="film-release">Release Year: <span>2012</span></p>
+                <p class="film-genre">Genre: <span>Superhero/Action</span></p>
+                <p class="film-actors">Actors: <span>Christian Bale, Tom Hardy, Anne Hathaway, Joseph Gordon-Levitt, Gary Oldman, Michael Caine, Morgan Freeman, Cillian Murphy</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 40 minutes</span></p>
+            </div>
+        </div>
+             
+        <div class="film-box" onmouseover="showinfoboxnew('stalin')" onmouseout="showinfoboxnew('stalin')">
+            <img src="posters/stalin.jpg" alt="The Death of Stalin" class="film-poster">
+           <div class="film-information-box" id="fib14">
+                <div class="film-ownership blu-ray">
+                    <img src="icons/blu-ray.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership fifteen">
+                    <img src="ratings/15.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score nine">
+                    <p class="film-score-text">9/10</p>
+                </div>
+                <p class="film-name">The Death of Stalin</p>
+                <p class="film-director">Director: <span>Armando Iannucci</span></p>
+                <p class="film-release">Release Year: <span>2017</span></p>
+                <p class="film-genre">Genre: <span>Drama/Comedy</span></p>
+                <p class="film-actors">Actors: <span>Steve Buscemi, Jeffrey Tambor, Jason Issacs, Michael Palin, Simon Russell Beale</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 46 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('despicable2')" onmouseout="showinfoboxnew('despicable2')">
+            <img src="posters/despicable2.png" alt="Despicable Me 2" class="film-poster">
+           <div class="film-information-box" id="fib23">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership u">
+                    <img src="ratings/u.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score six">
+                    <p class="film-score-text">6/10</p>
+                </div>
+                <p class="film-name">Despicable Me 2</p>
+                <p class="film-director">Director: <span>Pierre Coffin, Chris Renaud</span></p>
+                <p class="film-release">Release Year: <span>2013</span></p>
+                <p class="film-genre">Genre: <span>Animation/Comedy</span></p>
+                <p class="film-actors">Actors: <span>Steve Carell, Kristen Wiig</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 38 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('district')" onmouseout="showinfoboxnew('district')">
+            <img src="posters/district.jpg" alt="District 9" class="film-poster">
+           <div class="film-information-box" id="fib24">
+                <div class="film-ownership blu-ray">
+                    <img src="icons/blu-ray.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership fifteen">
+                    <img src="ratings/15.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score nine">
+                    <p class="film-score-text">9/10</p>
+                </div>
+                <p class="film-name">District 9</p>
+                <p class="film-director">Director: <span>Neill Blomkamp</span></p>
+                <p class="film-release">Release Year: <span>2009</span></p>
+                <p class="film-genre">Genre: <span>Science-Fiction/Action</span></p>
+                <p class="film-actors">Actors: <span>Sharlto Copley, Jason Cope, Louis Minnaar</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 52 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('strangelove')" onmouseout="showinfoboxnew('strangelove')">
+            <img src="posters/strangelove.jpg" alt="Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb" class="film-poster">
+           <div class="film-information-box" id="fib15">
+                <div class="film-ownership blu-ray">
+                    <img src="icons/blu-ray.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership pg">
+                    <img src="ratings/pg.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score nine">
+                    <p class="film-score-text">9/10</p>
+                </div>
+                <p class="film-name">Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb</p>
+                <p class="film-director">Director: <span>Stanley Kubrick</span></p>
+                <p class="film-release">Release Year: <span>1964</span></p>
+                <p class="film-genre">Genre: <span>Drama/Comedy</span></p>
+                <p class="film-actors">Actors: <span>Peter Sellers, George C. Scott</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 35 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box pointer" onmouseover="showinfoboxnew('fast1')" onmouseout="showinfoboxnew('fast1')">
+            <img src="posters/fast1.jpg" alt="The Fast and the Furious" class="film-poster">
+           <div class="film-information-box" id="fib69" onclick="showyoutubeinplayer('fast1youtubelink')">
+                <div class="film-ownership youtube">
+                    <img src="icons/youtube.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership fifteen">
+                    <img src="ratings/15.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score seven">
+                    <p class="film-score-text">7/10</p>
+                </div>
+                <p class="film-name">The Fast and the Furious</p>
+                <p class="film-director">Director: <span>Rob Cohen</span></p>
+                <p class="film-release">Release Year: <span>2001</span></p>
+                <p class="film-genre">Genre: <span>Action/Thriller</span></p>
+                <p class="film-actors">Actors: <span>Paul Walker, Vin Diesel, Michelle Rodriguez, Jordana Brewster</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 47 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('gladiator')" onmouseout="showinfoboxnew('gladiator')">
+            <img src="posters/gladiator.jpg" alt="Gladiator" class="film-poster">
+           <div class="film-information-box" id="fib2">
+                <div class="film-ownership blu-ray">
+                    <img src="icons/blu-ray.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership fifteen">
+                    <img src="ratings/15.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score ten">
+                    <p class="film-score-text">10/10</p>
+                </div>
+                <p class="film-name">Gladiator</p>
+                <p class="film-director">Director: <span>Ridley Scott</span></p>
+                <p class="film-release">Release Year: <span>2001</span></p>
+                <p class="film-genre">Genre: <span>Action/Adventure</span></p>
+                <p class="film-actors">Actors: <span>Russel Crowe, Joaquin Phoenix, Derek Jacobi</span></p>
+                <p class="film-version">Version: <span>Extended Edition</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 50 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box pointer" onmouseover="showinfoboxnew('budapest')" onmouseout="showinfoboxnew('budapest')">
+            <img src="posters/budapest.jpg" alt="The Grand Budapest Hotel" class="film-poster">
+           <div class="film-information-box" id="fib76" onclick="showyoutubeinplayer('budapestyoutubelink')">
+                <div class="film-ownership youtube">
+                    <img src="icons/youtube.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership fifteen">
+                    <img src="ratings/15.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score nine">
+                    <p class="film-score-text">9/10</p>
+                </div>
+                <p class="film-name">The Grand Budapest Hotel</p>
+                <p class="film-director">Director: <span>Wes Anderson</span></p>
+                <p class="film-release">Release Year: <span>2004</span></p>
+                <p class="film-genre">Genre: <span>Drama/Crime</span></p>
+                <p class="film-actors">Actors: <span>Ralph Fiennes, Saoirse Ronan, Bill Murray, Edward Norton, Willem Dafoe, Tilda Swinton, Adrien Brody, Jeff Goldblum</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 40 minutes</span></p>
+            </div>
+        </div>
+         
+        <div class="film-box pointer" onmouseover="showinfoboxnew('gravity')" onmouseout="showinfoboxnew('gravity')">
+            <img src="posters/gravity.jpg" alt="Gravity" class="film-poster">
+           <div class="film-information-box" id="fib25" onclick="showyoutubeinplayer('gravityyoutubelink')">
+                <div class="film-ownership youtube">
+                    <img src="icons/youtube.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelve">
+                    <img src="ratings/12.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score six">
+                    <p class="film-score-text">6/10</p>
+                </div>
+                <p class="film-name">Gravity</p>
+                <p class="film-director">Director: <span>Alfonso Cuarón</span></p>
+                <p class="film-release">Release Year: <span>2013</span></p>
+                <p class="film-genre">Genre: <span>Science-Fiction/Action</span></p>
+                <p class="film-actors">Actors: <span>George Clooney, Sandra Bullock</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 30 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box pointer" onmouseover="showinfoboxnew('handmaiden')" onmouseout="showinfoboxnew('handmaiden')">
+            <img src="posters/handmaiden.jpg" alt="The Handmaiden" class="film-poster">
+           <div class="film-information-box" id="fib62" onclick="showyoutubeinplayer('handmaidenyoutubelink')">
+                <div class="film-ownership youtube">
+                    <img src="icons/youtube.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership eighteen">
+                    <img src="ratings/18.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score nine">
+                    <p class="film-score-text">9/10</p>
+                </div>
+                <p class="film-name">The Handmaiden</p>
+                <p class="film-director">Director: <span>Chan-wook Park</span></p>
+                <p class="film-release">Release Year: <span>2017</span></p>
+                <p class="film-genre">Genre: <span>Psychological Thriller/Erotic</span></p>
+                <p class="film-actors">Actors: <span>Minhee Kim, Tae Ri Kim, Jung-woo Ha, Jin-woong Jo</span></p>
+                <p class="film-version">Version: <span>Extended Edition</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 48 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('hp1')" onmouseout="showinfoboxnew('hp1')">
+            <img src="posters/hp1.jpg" alt="Harry Potter" class="film-poster">
+           <div class="film-information-box" id="fib37">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership pg">
+                    <img src="ratings/pg.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score seven">
+                    <p class="film-score-text">7/10</p>
+                </div>
+                <p class="film-name">Harry Potter and the Philosopher's Stone</p>
+                <p class="film-director">Director: <span>Chris Columbus</span></p>
+                <p class="film-release">Release Year: <span>2001</span></p>
+                <p class="film-genre">Genre: <span>Fantasy</span></p>
+                <p class="film-actors">Actors: <span>Daniel Radcliffe, Emma Watson, Rupert Grint</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 27 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('hp2')" onmouseout="showinfoboxnew('hp2')">
+            <img src="posters/hp2.jpg" alt="Harry Potter" class="film-poster">
+           <div class="film-information-box" id="fib38">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership pg">
+                    <img src="ratings/pg.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score seven">
+                    <p class="film-score-text">7/10</p>
+                </div>
+                <p class="film-name">Harry Potter and the Chamber of Secrets</p>
+                <p class="film-director">Director: <span>Chris Columbus</span></p>
+                <p class="film-release">Release Year: <span>2002</span></p>
+                <p class="film-genre">Genre: <span>Fantasy</span></p>
+                <p class="film-actors">Actors: <span>Daniel Radcliffe, Emma Watson, Rupert Grint</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 34 minutes</span></p>
+            </div>
+        </div>
+        
+       <div class="film-box" onmouseover="showinfoboxnew('hp3')" onmouseout="showinfoboxnew('hp3')">
+            <img src="posters/hp3.jpg" alt="Harry Potter" class="film-poster">
+           <div class="film-information-box" id="fib39">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership pg">
+                    <img src="ratings/pg.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score seven">
+                    <p class="film-score-text">7/10</p>
+                </div>
+                <p class="film-name">Harry Potter and the Prisoner of Azkaban</p>
+                <p class="film-director">Director: <span>Alfonso Cuarón</span></p>
+                <p class="film-release">Release Year: <span>2004</span></p>
+                <p class="film-genre">Genre: <span>Fantasy</span></p>
+                <p class="film-actors">Actors: <span>Daniel Radcliffe, Emma Watson, Rupert Grint</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 16 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('hp4')" onmouseout="showinfoboxnew('hp4')">
+            <img src="posters/hp4.jpg" alt="Harry Potter" class="film-poster">
+           <div class="film-information-box" id="fib40">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelve">
+                    <img src="ratings/12.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score six">
+                    <p class="film-score-text">6/10</p>
+                </div>
+                <p class="film-name">Harry Potter and the Goblet of Fire</p>
+                <p class="film-director">Director: <span>Mike Newell</span></p>
+                <p class="film-release">Release Year: <span>2005</span></p>
+                <p class="film-genre">Genre: <span>Fantasy</span></p>
+                <p class="film-actors">Actors: <span>Daniel Radcliffe, Emma Watson, Rupert Grint</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 31 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('hp5')" onmouseout="showinfoboxnew('hp5')">
+            <img src="posters/hp5.jpg" alt="Harry Potter" class="film-poster">
+           <div class="film-information-box" id="fib41">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelve">
+                    <img src="ratings/12.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score seven">
+                    <p class="film-score-text">7/10</p>
+                </div>
+                <p class="film-name">Harry Potter and the Order of the Phoenix</p>
+                <p class="film-director">Director: <span>David Yates</span></p>
+                <p class="film-release">Release Year: <span>2007</span></p>
+                <p class="film-genre">Genre: <span>Fantasy</span></p>
+                <p class="film-actors">Actors: <span>Daniel Radcliffe, Emma Watson, Rupert Grint</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 12 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('hp6')" onmouseout="showinfoboxnew('hp6')">
+            <img src="posters/hp6.jpg" alt="Harry Potter" class="film-poster">
+           <div class="film-information-box" id="fib42">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelve">
+                    <img src="ratings/12.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score seven">
+                    <p class="film-score-text">7/10</p>
+                </div>
+                <p class="film-name">Harry Potter and the Half-Blood Prince</p>
+                <p class="film-director">Director: <span>David Yates</span></p>
+                <p class="film-release">Release Year: <span>2009</span></p>
+                <p class="film-genre">Genre: <span>Fantasy</span></p>
+                <p class="film-actors">Actors: <span>Daniel Radcliffe, Emma Watson, Rupert Grint</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 27 minutes</span></p>
+            </div>
+        </div>
+        
+       <div class="film-box" onmouseover="showinfoboxnew('hp7')" onmouseout="showinfoboxnew('hp7')">
+            <img src="posters/hp7.jpg" alt="Harry Potter" class="film-poster">
+           <div class="film-information-box" id="fib43">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelve">
+                    <img src="ratings/12.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score seven">
+                    <p class="film-score-text">7/10</p>
+                </div>
+                <p class="film-name">Harry Potter and the Deathly Hallows – Part 1</p>
+                 <p class="film-director">Director: <span>David Yates</span></p>
+                <p class="film-release">Release Year: <span>2010</span></p>
+                <p class="film-genre">Genre: <span>Fantasy</span></p>
+                <p class="film-actors">Actors: <span>Daniel Radcliffe, Emma Watson, Rupert Grint</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 20 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" 
+                      onmouseover="showinfoboxnew('hp8'); showbluraydvdin('hp8');" onmouseout="showinfoboxnew('hp8'); showbluraydvdout('hp8');">
+            <img src="posters/hp8.jpg" alt="Harry Potter" class="film-poster">
+           <div class="film-information-box" id="fib44">
+                <div class="brdvd" id="brdvd1">
+               Both Discs
+               </div>
+                <p class="film-name">Harry Potter and the Deathly Hallows – Part 2</p>
+                <p class="film-director">Director: <span>David Yates</span></p>
+                <p class="film-release">Release Year: <span>2011</span></p>
+                <p class="film-genre">Genre: <span>Fantasy</span></p>
+                <p class="film-actors">Actors: <span>Daniel Radcliffe, Emma Watson, Rupert Grint</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 10 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box"
+         onmouseover="showinfoboxnew('howls'); showbluraydvdin('howls');" onmouseout="showinfoboxnew('howls'); showbluraydvdout('howls');">
+            <img src="posters/howls.jpg" alt="Howl's Moving Castle" class="film-poster">
+           <div class="film-information-box" id="fib10">
+                <div class="brdvd" id="brdvd2">
+               Both Discs
+               </div>
+                <p class="film-name">Howl's Moving Castle</p>
+                <p class="film-director">Director: <span>Hayao Miyazaki</span></p>
+                <p class="film-release">Release Year: <span>2004</span></p>
+                <p class="film-genre">Genre: <span>Anime/Fantasy</span></p>
+                <p class="film-actors">Actors: <span>Jean Simmons, Emily Mortimer, Christian Bale, Lauren Bacall (English dub)</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 59 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('ice')" onmouseout="showinfoboxnew('ice')">
+            <img src="posters/ice.jpg" alt="Ice Age" class="film-poster">
+           <div class="film-information-box" id="fib26">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership u">
+                    <img src="ratings/u.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score seven">
+                    <p class="film-score-text">7/10</p>
+                </div>
+                <p class="film-name">Ice Age</p>
+                <p class="film-director">Director: <span>Chris Wedge</span></p>
+                <p class="film-release">Release Year: <span>2002</span></p>
+                <p class="film-genre">Genre: <span>Animation/Adventure</span></p>
+                <p class="film-actors">Actors: <span>Ray Romano, John Leguizamo, Denis Leary</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 17 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('interstellar')" onmouseout="showinfoboxnew('interstellar')">
+            <img src="posters/interstellar.jpg" alt="Interstellar" class="film-poster">
+           <div class="film-information-box" id="fib27">
+                <div class="film-ownership blu-ray">
+                    <img src="icons/blu-ray.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelve">
+                    <img src="ratings/12.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score nine">
+                    <p class="film-score-text">9/10</p>
+                </div>
+                <p class="film-name">Interstellar</p>
+                <p class="film-director">Director: <span>Christopher Nolan</span></p>
+                <p class="film-release">Release Year: <span>2014</span></p>
+                <p class="film-genre">Genre: <span>Science-Fiction</span></p>
+                <p class="film-actors">Actors: <span>Matthew McConaughey, Anne Hathaway, Jessica Chastain, Michael Caine, Mackenzie Foy, Matt Damon, Casey Affleck</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 49 minutes</span></p>
+            </div>
+        </div>
+        
+        <a href="https://www.amazon.co.uk/Lawrence-Arabia-Restored-Version-OToole/dp/B00FZR8F3C/ref=sr_1_1?keywords=Lawrence+of+arabia&qid=1565636379&s=instant-video&sr=1-1">
+        <div class="film-box" onmouseover="showinfoboxnew('arabia')" onmouseout="showinfoboxnew('arabia')">
+            <img src="posters/arabia.jpg" alt="Lawrence of Arabia" class="film-poster">
+           <div class="film-information-box" id="fib74">
+                <div class="film-ownership prime">
+                    <img src="icons/prime.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership pg">
+                    <img src="ratings/pg.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score nine">
+                    <p class="film-score-text">9/10</p>
+                </div>
+                <p class="film-name">Lawrence of Arabia</p>
+                <p class="film-director">Director: <span>David Lean</span></p>
+                <p class="film-release">Release Year: <span>1962</span></p>
+                <p class="film-genre">Genre: <span>Historical Epic</span></p>
+                <p class="film-actors">Actors: <span>Peter O'Toole, Omar Sharif, Alec Guinness, Anthony Quinn</span></p>
+                <p class="film-version">Version: <span>Restored Version</span></p>
+                <p class="film-runtime">Running Time: <span>3 hours 47 minutes</span></p>
+            </div>
+        </div>
+        </a>
+        
+        <div class="film-box pointer" onmouseover="showinfoboxnew('legobatman')" onmouseout="showinfoboxnew('legobatman')">
+            <img src="posters/legobatman.jpg" alt="The Lego Batman Movie" class="film-poster">
+           <div class="film-information-box" id="fib28" onclick="showyoutubeinplayer('legobatmanyoutubelink')">
+                <div class="film-ownership youtube">
+                    <img src="icons/youtube.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership u">
+                    <img src="ratings/u.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score eight">
+                    <p class="film-score-text">8/10</p>
+                </div>
+                <p class="film-name">The Lego Batman Movie</p>
+                <p class="film-director">Director: <span>Chris McKay</span></p>
+                <p class="film-release">Release Year: <span>2017</span></p>
+                <p class="film-genre">Genre: <span>Animation/Superhero</span></p>
+                <p class="film-actors">Actors: <span>Will Arnett, Michael Cera, Rosario Dawson, Zach Galifianakis</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 44 minutes</span></p>
+            </div>
+        </div>
+        
+        <a href="https://rakuten.tv/uk/movies/the-lego-movie">
+        <div class="film-box" onmouseover="showinfoboxnew('lego')" onmouseout="showinfoboxnew('lego')">
+            <img src="posters/lego.jpg" alt="The Lego Movie" class="film-poster">
+           <div class="film-information-box" id="fib29">
+                <div class="film-ownership rakuten-tv">
+                    <img src="icons/rakuten.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership u">
+                    <img src="ratings/u.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score eight">
+                    <p class="film-score-text">8/10</p>
+                </div>
+                <p class="film-name">The Lego Movie</p>
+                <p class="film-director">Director: <span>Chris Miller, Phil Lord</span></p>
+                <p class="film-release">Release Year: <span>2014</span></p>
+                <p class="film-genre">Genre: <span>Animation/Adventure</span></p>
+                <p class="film-actors">Actors: <span>Chris Pratt, Elizabeth Banks, Will Ferrell, Morgan Freeman, Liam Neeson</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 41 minutes</span></p>
+            </div>
+        </div>
+        </a>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('fellowship')" onmouseout="showinfoboxnew('fellowship')">
+            <img src="posters/fellowship.jpg" alt="The Lord of the Rings: The Fellowship of the Ring" class="film-poster">
+           <div class="film-information-box" id="fib30">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership pg">
+                    <img src="ratings/pg.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score seven">
+                    <p class="film-score-text">7/10</p>
+                </div>
+                <p class="film-name">The Lord of the Rings: The Fellowship of the Ring</p>
+                <p class="film-director">Director: <span>Peter Jackson</span></p>
+                <p class="film-release">Release Year: <span>2001</span></p>
+                <p class="film-genre">Genre: <span>Fantasy/Adventure</span></p>
+                <p class="film-actors">Actors: <span>Elijah Wood, Sean Astin, Orlando Bloom, Viggo Mortensen, Ian McKellen, Cate Blanchett, Hugo Weaving, Andy Serkis, Christopher Lee</span></p>
+                <p class="film-version">Version: <span>Extended Edition</span></p>
+                <p class="film-runtime">Running Time: <span>3 hours 20 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('twotowers')" onmouseout="showinfoboxnew('twotowers')">
+            <img src="posters/twotowers.jpg" alt="The Lord of the Rings: The Two Towers" class="film-poster">
+           <div class="film-information-box" id="fib31">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelve">
+                    <img src="ratings/12.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score eight">
+                    <p class="film-score-text">8/10</p>
+                </div>
+                <p class="film-name">The Lord of the Rings: The Two Towers</p>
+                <p class="film-director">Director: <span>Peter Jackson</span></p>
+                <p class="film-release">Release Year: <span>2002</span></p>
+                <p class="film-genre">Genre: <span>Fantasy/Adventure</span></p>
+                <p class="film-actors">Actors: <span>Elijah Wood, Sean Astin, Orlando Bloom, Viggo Mortensen, Ian McKellen, Cate Blanchett, Hugo Weaving, Andy Serkis, Christopher Lee</span></p>
+                <p class="film-version">Version: <span>Extended Edition</span></p>
+                <p class="film-runtime">Running Time: <span>3 hours 34 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('returnking')" onmouseout="showinfoboxnew('returnking')">
+            <img src="posters/returnking.jpg" alt="The Lord of the Rings: The Return of the King" class="film-poster">
+           <div class="film-information-box" id="fib32">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelve">
+                    <img src="ratings/12.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score eight">
+                    <p class="film-score-text">8/10</p>
+                </div>
+                <p class="film-name">The Lord of the Rings: The Return of the King</p>
+                <p class="film-director">Director: <span>Peter Jackson</span></p>
+                <p class="film-release">Release Year: <span>2003</span></p>
+                <p class="film-genre">Genre: <span>Fantasy/Adventure</span></p>
+                <p class="film-actors">Actors: <span>Elijah Wood, Sean Astin, Orlando Bloom, Viggo Mortensen, Ian McKellen, Cate Blanchett, Hugo Weaving, Andy Serkis, Christopher Lee</span></p>
+                <p class="film-version">Version: <span>Extended Edition</span></p>
+                <p class="film-runtime">Running Time: <span>4 hours 0 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box pointer" onmouseover="showinfoboxnew('maze')" onmouseout="showinfoboxnew('maze')">
+            <img src="posters/maze.jpg" alt="The Maze Runner" class="film-poster">
+             <div class="film-information-box" id="fib33" onclick="showyoutubeinplayer('mazeyoutubelink')">
+                <div class="film-ownership youtube">
+                    <img src="icons/youtube.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership fifteen">
+                    <img src="ratings/15.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score six">
+                    <p class="film-score-text">6/10</p>
+                </div>
+                <p class="film-name">The Maze Runner</p>
+                <p class="film-director">Director: <span>Wes Ball</span></p>
+                <p class="film-release">Release Year: <span>2014</span></p>
+                <p class="film-genre">Genre: <span>Science-Fiction/Dystopia</span></p>
+                <p class="film-actors">Actors: <span>Dylan O'Brien, Thomas Brodie-Sangster, Kaya Scodelario, Will Poulter</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 53 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('mibthree')" onmouseout="showinfoboxnew('mibthree')">
+            <img src="posters/mibthree.jpg" alt="Men in Black 3" class="film-poster">
+             <div class="film-information-box" id="fib34">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership pg">
+                    <img src="ratings/pg.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score five">
+                    <p class="film-score-text">5/10</p>
+                </div>
+                <p class="film-name">Men in Black 3</p>
+                <p class="film-director">Director: <span>Barry Sonnenfeld</span></p>
+                <p class="film-release">Release Year: <span>2012</span></p>
+                <p class="film-genre">Genre: <span>Science-Fiction/Action</span></p>
+                <p class="film-actors">Actors: <span>Will Smith, Tommy Lee Jones, Josh Brolin, Emma Thompson</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 41 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('mulholland')" onmouseout="showinfoboxnew('mulholland')">
+            <img src="posters/mulholland.jpg" alt="Mulholland Drive" class="film-poster">
+             <div class="film-information-box" id="fib3">
+                <div class="film-ownership blu-ray">
+                    <img src="icons/blu-ray.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership fifteen">
+                    <img src="ratings/15.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score ten">
+                    <p class="film-score-text">10/10</p>
+                </div>
+                <p class="film-name">Mulholland Drive</p>
+                <p class="film-director">Director: <span>David Lynch</span></p>
+                <p class="film-release">Release Year: <span>2001</span></p>
+                <p class="film-genre">Genre: <span>Neo-Noir/Psychological Thriller</span></p>
+                <p class="film-actors">Actors: <span>Naomi Watts, Laura Harring, Justin Theroux</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 27 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box"
+         onmouseover="showinfoboxnew('totoro'); showbluraydvdin('totoro');" onmouseout="showinfoboxnew('totoro'); showbluraydvdout('totoro');">
+            <img src="posters/totoro.jpg" alt="My Neighbour Totoro" class="film-poster">
+            <div class="film-information-box" id="fib4">
+                <div class="brdvd" id="brdvd3">
+               Both Discs
+               </div>
+                <p class="film-name">My Neighbour Totoro</p>
+                <p class="film-director">Director: <span>Hayao Miyazaki</span></p>
+                <p class="film-release">Release Year: <span>1988</span></p>
+                <p class="film-genre">Genre: <span>Anime/Fantasy</span></p>
+                <p class="film-actors">Actors: <span>Dakota Fanning, Elle Fanning, Lea Salonga (2005 English dub)</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 26 minutes</span></p>
+            </div>
+        </div>   
+        
+        <div class="film-box" onmouseover="showinfoboxnew('narnia')" onmouseout="showinfoboxnew('narnia')">
+            <img src="posters/narnia.jpg" alt="The Chronicles of Narnia: The Lion, the Witch and the Wardrobe" class="film-poster">
+           <div class="film-information-box" id="fib19">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership pg">
+                    <img src="ratings/pg.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score six">
+                    <p class="film-score-text">6/10</p>
+                </div>
+                <p class="film-name">The Chronicles of Narnia: The Lion, the Witch and the Wardrobe</p>
+                <p class="film-director">Director: <span>Andrew Adamson</span></p>
+                <p class="film-release">Release Year: <span>2005</span></p>
+                <p class="film-genre">Genre: <span>Fantasy</span></p>
+                <p class="film-actors">Actors: <span>William Moseley, Tilda Swinton, Skandar Keynes, Anna Popplewell, Georgie Henley</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 17 minutes</span></p>
+            </div>
+        </div>
+           
+        <div class="film-box" onmouseover="showinfoboxnew('caspian')" onmouseout="showinfoboxnew('caspian')">
+            <img src="posters/caspian.jpg" alt="The Chronicles of Narnia: Prince Caspian" class="film-poster">
+           <div class="film-information-box" id="fib20">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership pg">
+                    <img src="ratings/pg.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score six">
+                    <p class="film-score-text">6/10</p>
+                </div>
+                <p class="film-name">The Chronicles of Narnia: Prince Caspian</p>
+                <p class="film-director">Director: <span>Andrew Adamson</span></p>
+                <p class="film-release">Release Year: <span>2008</span></p>
+                <p class="film-genre">Genre: <span>Fantasy</span></p>
+                <p class="film-actors">Actors: <span>William Moseley, Ben Barnes, Skandar Keynes, Anna Popplewell, Georgie Henley</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 24 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box pointer" onmouseover="showinfoboxnew('museum')" onmouseout="showinfoboxnew('museum')">
+            <img src="posters/museum.jpg" alt="Night at the Museum" class="film-poster">
+             <div class="film-information-box" id="fib35" onclick="showyoutubeinplayer('museumyoutubelink')">
+                <div class="film-ownership youtube">
+                    <img src="icons/youtube.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership pg">
+                    <img src="ratings/pg.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score six">
+                    <p class="film-score-text">6/10</p>
+                </div>
+                <p class="film-name">Night at the Museum</p>
+                <p class="film-director">Director: <span>Shawn Levy</span></p>
+                <p class="film-release">Release Year: <span>2006</span></p>
+                <p class="film-genre">Genre: <span>Fantasy/Action</span></p>
+                <p class="film-actors">Actors: <span>Ben Stiller, Robin Williams, Owen Wilson, Ricky Gervais, Rami Malek, Dick Van Dyke, Steve Coogan</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 49 minutes</span></p>
+            </div>
+        </div> 
+        
+        <div class="film-box" onmouseover="showinfoboxnew('nightcrawler')" onmouseout="showinfoboxnew('nightcrawler')">
+            <img src="posters/nightcrawler.jpg" alt="Nightcrawler" class="film-poster">
+            <div class="film-information-box" id="fib36">
+                <div class="film-ownership blu-ray">
+                    <img src="icons/blu-ray.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership fifteen">
+                    <img src="ratings/15.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score nine">
+                    <p class="film-score-text">9/10</p>
+                </div>
+                <p class="film-name">Nightcrawler</p>
+                <p class="film-director">Director: <span>Dan Gilroy</span></p>
+                <p class="film-release">Release Year: <span>2014</span></p>
+                <p class="film-genre">Genre: <span>Thriller</span></p>
+                <p class="film-actors">Actors: <span>Jake Gyllenhaal, Rene Russo, Riz Ahmed</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 57 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('pans')" onmouseout="showinfoboxnew('pans')">
+            <img src="posters/pans.jpg" alt="Pan's Labyrinth" class="film-poster">
+            <div class="film-information-box" id="fib5">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership fifteen">
+                    <img src="ratings/15.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score ten">
+                    <p class="film-score-text">10/10</p>
+                </div>
+                <p class="film-name">Pan's Labyrinth</p>
+                <p class="film-director">Director: <span>Guillermo del Toro</span></p>
+                <p class="film-release">Release Year: <span>2006</span></p>
+                <p class="film-genre">Genre: <span>Dark Fantasy/Drama</span></p>
+                <p class="film-actors">Actors: <span>Ivana Baquero, Doug Jones, Sergi López</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 58 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box pointer" onmouseover="showinfoboxnew('pianist')" onmouseout="showinfoboxnew('pianist')">
+            <img src="posters/pianist.jpg" alt="The Pianist" class="film-poster">
+           <div class="film-information-box" id="fib77" onclick="showyoutubeinplayer('pianistyoutubelink')">
+                <div class="film-ownership youtube">
+                    <img src="icons/youtube.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership fifteen">
+                    <img src="ratings/15.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score nine">
+                    <p class="film-score-text">9/10</p>
+                </div>
+                <p class="film-name">The Pianist</p>
+                <p class="film-director">Director: <span>Roman Polanski</span></p>
+                <p class="film-release">Release Year: <span>2002</span></p>
+                <p class="film-genre">Genre: <span>Drama/Historical</span></p>
+                <p class="film-actors">Actors: <span>Adrien Brody, Emilia Fox, Maureen Lipman</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 29 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('chest')" onmouseout="showinfoboxnew('chest')">
+            <img src="posters/chest.jpg" alt="Pirates of the Caribbean: Dead Man's Chest" class="film-poster">
+            <div class="film-information-box" id="fib51">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelve">
+                    <img src="ratings/12.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score seven">
+                    <p class="film-score-text">7/10</p>
+                </div>
+                <p class="film-name">Pirates of the Caribbean: Dead Man's Chest</p>
+                <p class="film-director">Director: <span>Gore Verbinski</span></p>
+                <p class="film-release">Release Year: <span>2006</span></p>
+                <p class="film-genre">Genre: <span>Swashbuckler/Adventure</span></p>
+                <p class="film-actors">Actors: <span>Johnny Depp, Keira Knightley, Orlando Bloom, Bill Nighy</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 25 minutes</span></p>
+            </div>
+        </div>
+           
+        <div class="film-box" onmouseover="showinfoboxnew('worlds')" onmouseout="showinfoboxnew('worlds')">
+            <img src="posters/worlds.jpg" alt="Pirates of the Caribbean: At World's End" class="film-poster">
+            <div class="film-information-box" id="fib50">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelve">
+                    <img src="ratings/12.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score six">
+                    <p class="film-score-text">6/10</p>
+                </div>
+                <p class="film-name">Pirates of the Caribbean: At World's End</p>
+                <p class="film-director">Director: <span>Gore Verbinski</span></p>
+                <p class="film-release">Release Year: <span>2007</span></p>
+                <p class="film-genre">Genre: <span>Swashbuckler/Adventure</span></p>
+                <p class="film-actors">Actors: <span>Johnny Depp, Keira Knightley, Orlando Bloom, Geoffrey Rush</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 41 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('mononoke'); showbluraydvdin('mononoke');" onmouseout="showinfoboxnew('mononoke'); showbluraydvdout('mononoke');">
+            <img src="posters/mononoke.jpg" alt="Princess Mononoke" class="film-poster">
+            <div class="film-information-box" id="fib6">
+                <div class="brdvd" id="brdvd4">
+               Both Discs
+               </div>
+                <p class="film-name">Princess Mononoke</p>
+                <p class="film-director">Director: <span>Hayao Miyazaki</span></p>
+                <p class="film-release">Release Year: <span>1997</span></p>
+                <p class="film-genre">Genre: <span>Anime/Fantasy/Historical Epic</span></p>
+                <p class="film-actors">Actors: <span>Billy Crudup, Claire Danes, Minnie Driver (English dub)</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 14 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box pointer" onmouseover="showinfoboxnew('pulp')" onmouseout="showinfoboxnew('pulp')">
+            <img src="posters/pulp.jpg" alt="Pulp Fiction" class="film-poster">
+            <div class="film-information-box" id="fib9"                onclick="showyoutubeinplayer('pulpyoutubelink')">
+                <div class="film-ownership youtube">
+                    <img src="icons/youtube.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership eighteen">
+                    <img src="ratings/18.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score nine">
+                    <p class="film-score-text">9/10</p>
+                </div>
+                <p class="film-director">Director: <span>Quentin Tarantino</span></p>
+                <p class="film-release">Release Year: <span>1994</span></p>
+                <p class="film-genre">Genre: <span>Crime</span></p>
+                <p class="film-actors">Actors: <span>John Travolta, Uma Thurman, Samuel L. Jackson, Bruce Willis</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 34 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box pointer" onmouseover="showinfoboxnew('rememory')" onmouseout="showinfoboxnew('rememory')">
+            <img src="posters/rememory.jpg" alt="Rememory" class="film-poster">
+            <div class="film-information-box" id="fib52" onclick="showyoutubeinplayer('rememoryyoutubelink')">
+                <div class="film-ownership youtube">
+                    <img src="icons/youtube.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelve">
+                    <img src="ratings/12.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score five">
+                    <p class="film-score-text">5/10</p>
+                </div>
+                <p class="film-name">Rememory</p>
+                <p class="film-director">Director: <span>Mark Palansky</span></p>
+                <p class="film-release">Release Year: <span>2017</span></p>
+                <p class="film-genre">Genre: <span>Science-Fiction/Mystery</span></p>
+                <p class="film-actors">Actors: <span>Peter Dinklage, Julia Ormond, Martin Donovan</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 52 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box pointer" onmouseover="showinfoboxnew('rogue')" onmouseout="showinfoboxnew('rogue')">
+            <img src="posters/rogue.jpg" alt="Rogue One: A Star Wars Story" class="film-poster">
+           <div class="film-information-box" id="fib53" onclick="showyoutubeinplayer('rogueyoutubelink')">
+                <div class="film-ownership youtube">
+                    <img src="icons/youtube.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelvea">
+                    <img src="ratings/12a.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score eight">
+                    <p class="film-score-text">8/10</p>
+                </div>
+                <p class="film-name">Rogue One: A Star Wars Story</p>
+                <p class="film-director">Director: <span>Gareth Edwards</span></p>
+                <p class="film-release">Release Year: <span>2016</span></p>
+                <p class="film-genre">Genre: <span>Space-Opera</span></p>
+                <p class="film-actors">Actors: <span>Felicity Jones, Diego Luna, Riz Ahmed, Ben Mendelsohn, Mads Mikkelsen</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 13 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('searching')" onmouseout="showinfoboxnew('searching')">
+            <img src="posters/searching.jpg" alt="Searching" class="film-poster">
+            <div class="film-information-box" id="fib7">
+                <div class="film-ownership blu-ray">
+                    <img src="icons/blu-ray.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelve">
+                    <img src="ratings/12.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score ten">
+                    <p class="film-score-text">10/10</p>
+                </div>
+                <p class="film-name">Searching</p>
+                <p class="film-director">Director: <span>Aneesh Chaganty</span></p>
+                <p class="film-release">Release Year: <span>2018</span></p>
+                <p class="film-genre">Genre: <span>Thriller/Mystery</span></p>
+                <p class="film-actors">Actors: <span>John Cho, Debra Messing, Sara Sohn</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 42 minutes</span></p>
+            </div>
+        </div>
+
+        <div class="film-box" onmouseover="showinfoboxnew('water')" onmouseout="showinfoboxnew('water')">
+            <img src="posters/water.jpg" alt="The Shape of Water" class="film-poster">
+           <div class="film-information-box" id="fib54">
+                <div class="film-ownership blu-ray">
+                    <img src="icons/blu-ray.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership fifteen">
+                    <img src="ratings/15.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score eight">
+                    <p class="film-score-text">8/10</p>
+                </div>
+                <p class="film-name">The Shape of Water</p>
+                <p class="film-director">Director: <span>Guillermo del Toro</span></p>
+                <p class="film-release">Release Year: <span>2016</span></p>
+                <p class="film-genre">Genre: <span>Dark Fantasy/Romance</span></p>
+                <p class="film-actors">Actors: <span>Sally Hawkins, Octavia Spencer, Doug Jones, Michael Shannon</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 58 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('shawshank')" onmouseout="showinfoboxnew('shawshank')">
+            <img src="posters/shawshank.jpg" alt="The Shawshank Redemption" class="film-poster">
+           <div class="film-information-box" id="fib58">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership fifteen">
+                    <img src="ratings/15.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score nine">
+                    <p class="film-score-text">9/10</p>
+                </div>
+                <p class="film-name">The Shawshank Redemption</p>
+                <p class="film-director">Director: <span>Frank Darabont</span></p>
+                <p class="film-release">Release Year: <span>1994</span></p>
+                <p class="film-genre">Genre: <span>Drama/Crime</span></p>
+                <p class="film-actors">Actors: <span>Tim Robbins, Morgan Freeman</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 16 minutes</span></p>
+            </div>
+        </div>
+          
+        <div class="film-box pointer" onmouseover="showinfoboxnew('holmes')" onmouseout="showinfoboxnew('holmes')">
+            <img src="posters/holmes.jpg" alt="Sherlock Holmes" class="film-poster">
+           <div class="film-information-box" id="fib55" onclick="showyoutubeinplayer('holmesyoutubelink')">
+                <div class="film-ownership youtube">
+                    <img src="icons/youtube.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelve">
+                    <img src="ratings/12.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score six">
+                    <p class="film-score-text">6/10</p>
+                </div>
+                <p class="film-name">Sherlock Holmes</p>
+                <p class="film-director">Director: <span>Guy Ritchie</span></p>
+                <p class="film-release">Release Year: <span>2009</span></p>
+                <p class="film-genre">Genre: <span>Mystery/Period/Action</span></p>
+                <p class="film-actors">Actors: <span>Robert Downey, Jr., Jude Law, Rachel McAdams, Mark Strong, Kelly Reilly, Eddie Marsan</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 8 minutes</span></p>
+            </div>
+        </div>
+        
+        <a href="https://www.amazon.co.uk/Shining-Jack-Nicholson/dp/B00HQFFNRW/ref=sr_1_1?crid=3IBY48U5XYM5M&keywords=the+shining&qid=1564929673&s=instant-video&sprefix=the+shi%2Cinstant-video%2C151&sr=1-1">
+        <div class="film-box" onmouseover="showinfoboxnew('shining')" onmouseout="showinfoboxnew('shining')">
+            <img src="posters/shining.jpg" alt="The Shining" class="film-poster">
+           <div class="film-information-box" id="fib73">
+                <div class="film-ownership prime">
+                    <img src="icons/prime.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership fifteen">
+                    <img src="ratings/15.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score nine">
+                    <p class="film-score-text">9/10</p>
+                </div>
+                <p class="film-name">The Shining</p>
+                <p class="film-director">Director: <span>Stanley Kubrick</span></p>
+                <p class="film-release">Release Year: <span>1980</span></p>
+                <p class="film-genre">Genre: <span>Horror</span></p>
+                <p class="film-actors">Actors: <span>Jack Nicholson, Shelley Duvall, Danny Lloyd</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 59 minutes</span></p>
+            </div>
+        </div>
+        </a>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('shutter')" onmouseout="showinfoboxnew('shutter')">
+            <img src="posters/shutter.jpg" alt="Shutter Island" class="film-poster">
+           <div class="film-information-box" id="fib56">
+                <div class="film-ownership blu-ray">
+                    <img src="icons/blu-ray.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership fifteen">
+                    <img src="ratings/15.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score nine">
+                    <p class="film-score-text">9/10</p>
+                </div>
+                <p class="film-name">Shutter Island</p>
+                <p class="film-director">Director: <span>Martin Scorsese</span></p>
+                <p class="film-release">Release Year: <span>2010</span></p>
+                <p class="film-genre">Genre: <span>Neo-Noir/Psychological Thriller</span></p>
+                <p class="film-actors">Actors: <span>Leonard Di Caprio, Ben Kingsley, Mark Ruffalo</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 18 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box pointer" onmouseover="showinfoboxnew('solaris')" onmouseout="showinfoboxnew('solaris')">
+            <img src="posters/solaris.jpg" alt="Solaris" class="film-poster">
+           <div class="film-information-box" id="fib71" onclick="showyoutubeinplayer('solarisyoutubelink')">
+                <div class="film-ownership youtube">
+                    <img src="icons/youtube.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelvea">
+                    <img src="ratings/12a.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score nine">
+                    <p class="film-score-text">9/10</p>
+                </div>
+                <p class="film-name">Solaris</p>
+                <p class="film-director">Director: <span>Andrei Tarkovsky</span></p>
+                <p class="film-release">Release Year: <span>1972</span></p>
+                <p class="film-genre">Genre: <span>Science-Fiction</span></p>
+                <p class="film-actors">Actors: <span>Donatas Banionis, Natalya Bondarchuk</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 47 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('spectre')" onmouseout="showinfoboxnew('spectre')">
+            <img src="posters/spectre.jpg" alt="Spectre" class="film-poster">
+           <div class="film-information-box" id="fib57">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelve">
+                    <img src="ratings/12.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score seven">
+                    <p class="film-score-text">7/10</p>
+                </div>
+                <p class="film-name">Spectre</p>
+                <p class="film-director">Director: <span>Sam Mendes</span></p>
+                <p class="film-release">Release Year: <span>2015</span></p>
+                <p class="film-genre">Genre: <span>Spy/Thriller</span></p>
+                <p class="film-actors">Actors: <span>Daniel Craig, Léa Seydoux, Christoph Waltz, Monica Bellucci, Naomie Harris, Ralph Fiennes, Ben Whishaw, Andrew Scott, Dave Bautista, Rory Kinnear</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 22 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('spirited'); showbluraydvdin('spirited');" onmouseout="showinfoboxnew('spirited'); showbluraydvdout('spirited');">
+            <img src="posters/spirited.jpg" alt="Spirited Away" class="film-poster">
+            <div class="film-information-box" id="fib8">
+                <div class="brdvd" id="brdvd5">
+               Both Discs
+               </div>
+                <p class="film-name">Spirited Away</p>
+                <p class="film-director">Director: <span>Hayao Miyazaki</span></p>
+                <p class="film-release">Release Year: <span>2001</span></p>
+                <p class="film-genre">Genre: <span>Anime/Fantasy</span></p>
+                <p class="film-actors">Actors: <span>Daveigh Chase, Jason Marsden, Suzanne Pleshette (English dub)</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 4 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box pointer" onmouseover="showinfoboxnew('stalker')" onmouseout="showinfoboxnew('stalker')">
+            <img src="posters/stalker.jpg" alt="Stalker" class="film-poster">
+           <div class="film-information-box" id="fib72" onclick="showyoutubeinplayer('stalkeryoutubelink')">
+                <div class="film-ownership youtube">
+                    <img src="icons/youtube.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership pg">
+                    <img src="ratings/pg.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score seven">
+                    <p class="film-score-text">7/10</p>
+                </div>
+                <p class="film-name">Stalker</p>
+                <p class="film-director">Director: <span>Andrei Tarkovsky</span></p>
+                <p class="film-release">Release Year: <span>1980</span></p>
+                <p class="film-genre">Genre: <span>Science-Fiction</span></p>
+                <p class="film-actors">Actors: <span>Aleksandr Kaydanovskiy, Anatoliy Solonitsyn, Nikolay Grinko, Alisa Freyndlikh</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 42 minutes</span></p>
+            </div>
+        </div>
+        
+        <a href="https://www.amazon.co.uk/gp/video/detail/B00VIZDI78/ref=atv_yv_hom_c_unkc_1_9">
+        <div class="film-box" onmouseover="showinfoboxnew('sw1')" onmouseout="showinfoboxnew('sw1')">
+            <img src="posters/sw1.jpg" alt="Star Wars: Episode I – The Phantom Menace" class="film-poster">
+           <div class="film-information-box" id="fib63">
+                 <div class="film-ownership prime">
+                    <img src="icons/prime.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership u">
+                    <img src="ratings/u.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score eight">
+                    <p class="film-score-text">8/10</p>
+                </div>
+                <p class="film-name">Star Wars: Episode I – The Phantom Menace</p>
+                <p class="film-director">Director: <span>George Lucas</span></p>
+                <p class="film-release">Release Year: <span>1999</span></p>
+                <p class="film-genre">Genre: <span>Space Opera</span></p>
+                <p class="film-actors">Actors: <span>Jake Lloyd, Natalie Portman, Liam Neeson, Ewan McGregor, Ian McDiarmid, Samuel L. Jackson</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 16 minutes</span></p>
+            </div>
+        </div>
+        </a>
+        
+        <a href="https://www.amazon.co.uk/gp/video/detail/B00VIYE1I4/ref=atv_yv_hom_c_unkc_1_12">
+        <div class="film-box" onmouseover="showinfoboxnew('sw2')" onmouseout="showinfoboxnew('sw2')">
+            <img src="posters/sw2.jpg" alt="Star Wars: Episode II – Attack of the Clones" class="film-poster">
+           <div class="film-information-box" id="fib64">
+                <div class="film-ownership prime">
+                    <img src="icons/prime.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership pg">
+                    <img src="ratings/pg.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score eight">
+                    <p class="film-score-text">8/10</p>
+                </div>
+                <p class="film-name">Star Wars: Episode II – Attack of the Clones</p>
+                <p class="film-director">Director: <span>George Lucas</span></p>
+                <p class="film-release">Release Year: <span>2002</span></p>
+                <p class="film-genre">Genre: <span>Space Opera</span></p>
+                <p class="film-actors">Actors: <span>Hayden Christensen, Natalie Portman, Christopher Lee, Ewan McGregor, Ian McDiarmid, Samuel L. Jackson</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 22 minutes</span></p>
+            </div>
+        </div>
+        </a>
+        
+        <a href="https://www.amazon.co.uk/gp/video/detail/B00VIYEJ4A/ref=atv_yv_hom_c_unkc_1_3">
+        <div class="film-box" onmouseover="showinfoboxnew('sw3')" onmouseout="showinfoboxnew('sw3')">
+            <img src="posters/sw3.jpg" alt="Star Wars: Episode III – Revenge of the Sith" class="film-poster">
+           <div class="film-information-box" id="fib65">
+                <div class="film-ownership prime">
+                    <img src="icons/prime.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelve">
+                    <img src="ratings/12.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score eight">
+                    <p class="film-score-text">8/10</p>
+                </div>
+                <p class="film-name">Star Wars: Episode III – Revenge of the Sith</p>
+                <p class="film-director">Director: <span>George Lucas</span></p>
+                <p class="film-release">Release Year: <span>2005</span></p>
+                <p class="film-genre">Genre: <span>Space Opera</span></p>
+                <p class="film-actors">Actors: <span>Hayden Christensen, Natalie Portman, Ewan McGregor, Ian McDiarmid, Samuel L. Jackson</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 19 minutes</span></p>
+            </div>
+        </div>
+        </a>
+        
+        <a href="https://www.amazon.co.uk/gp/video/detail/B00VIZDW3S/ref=atv_yv_hom_c_unkc_1_1">
+        <div class="film-box" onmouseover="showinfoboxnew('sw4')" onmouseout="showinfoboxnew('sw4')">
+            <img src="posters/sw4.jpg" alt="Star Wars: Episode IV - A New Hope" class="film-poster">
+           <div class="film-information-box" id="fib66">
+                <div class="film-ownership prime">
+                    <img src="icons/prime.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership u">
+                    <img src="ratings/u.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score eight">
+                    <p class="film-score-text">8/10</p>
+                </div>
+                <p class="film-name">Star Wars: Episode IV - A New Hope</p>
+                <p class="film-director">Director: <span>George Lucas</span></p>
+                <p class="film-release">Release Year: <span>1977</span></p>
+                <p class="film-genre">Genre: <span>Space Opera</span></p>
+                <p class="film-actors">Actors: <span>Mark Hamill, Carrie Fisher, Harrison Ford, Alec Guinness, Peter Cushing</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 4 minutes</span></p>
+            </div>
+        </div>
+        </a>
+        
+        <a href="https://www.amazon.co.uk/gp/video/detail/B00VIZD9AY/ref=atv_yv_hom_c_unkc_1_7">
+        <div class="film-box" onmouseover="showinfoboxnew('sw5')" onmouseout="showinfoboxnew('sw5')">
+            <img src="posters/sw5.jpg" alt="Star Wars: Episode V – The Empire Strikes Back" class="film-poster">
+           <div class="film-information-box" id="fib67">
+                <div class="film-ownership prime">
+                    <img src="icons/prime.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership u">
+                    <img src="ratings/u.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score eight">
+                    <p class="film-score-text">8/10</p>
+                </div>
+                <p class="film-name">Star Wars: Episode V – The Empire Strikes Back</p>
+                <p class="film-director">Director: <span>Irvin Kershner</span></p>
+                <p class="film-release">Release Year: <span>1980</span></p>
+                <p class="film-genre">Genre: <span>Space Opera</span></p>
+                <p class="film-actors">Actors: <span>Mark Hamill, Carrie Fisher, Harrison Ford, Alec Guinness, Billy Dee Williams</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 7 minutes</span></p>
+            </div>
+        </div>
+        </a>
+        
+        <a href="https://www.amazon.co.uk/gp/video/detail/B00VIYEAGC/ref=atv_yv_hom_c_unkc_1_10">
+        <div class="film-box" onmouseover="showinfoboxnew('sw6')" onmouseout="showinfoboxnew('sw6')">
+            <img src="posters/sw6.jpg" alt="Star Wars: Episode VI – Return of the Jedi" class="film-poster">
+           <div class="film-information-box" id="fib68">
+                <div class="film-ownership prime">
+                    <img src="icons/prime.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership u">
+                    <img src="ratings/u.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score eight">
+                    <p class="film-score-text">8/10</p>
+                </div>
+                <p class="film-name">Star Wars: Episode VI – Return of the Jedi</p>
+                <p class="film-director">Director: <span>Richard Marquand</span></p>
+                <p class="film-release">Release Year: <span>1983</span></p>
+                <p class="film-genre">Genre: <span>Space Opera</span></p>
+                <p class="film-actors">Actors: <span>Mark Hamill, Carrie Fisher, Harrison Ford, Alec Guinness, Billy Dee Williams, James Earl Jones</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 14 minutes</span></p>
+            </div>
+        </div>
+        </a>
+        
+        <div class="film-box pointer" onmouseover="showinfoboxnew('blood')" onmouseout="showinfoboxnew('blood')">
+            <img src="posters/blood.jpg" alt="There Will Be Blood" class="film-poster">
+           <div class="film-information-box" id="fib60" onclick="showyoutubeinplayer('bloodyoutubelink')">
+                <div class="film-ownership youtube">
+                    <img src="icons/youtube.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership fifteen">
+                    <img src="ratings/15.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score nine">
+                    <p class="film-score-text">9/10</p>
+                </div>
+                <p class="film-name">There Will Be Blood</p>
+                <p class="film-director">Director: <span>Paul Thomas Anderson</span></p>
+                <p class="film-release">Release Year: <span>2007</span></p>
+                <p class="film-genre">Genre: <span>Drama/Epic</span></p>
+                <p class="film-actors">Actors: <span>Daniel Day-Lewis, Paul Dano, Dillon Freasier</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 38 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('treasure')" onmouseout="showinfoboxnew('treasure')">
+            <img src="posters/treasure.jpg" alt="Treasure Island" class="film-poster">
+           <div class="film-information-box" id="fib59">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelve">
+                    <img src="ratings/12.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score seven">
+                    <p class="film-score-text">7/10</p>
+                </div>
+                <p class="film-name">Treasure Island</p>
+                <p class="film-director">Director: <span>Steve Barron</span></p>
+                <p class="film-release">Release Year: <span>2012</span></p>
+                <p class="film-genre">Genre: <span>Swashbuckler/Adventure</span></p>
+                <p class="film-actors">Actors: <span>Eddie Izzard, Elijah Wood, Donald Sutherland, Philip Glenister, Rupert Penry-Jones</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 58 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('tw1')" onmouseout="showinfoboxnew('tw1')">
+            <img src="posters/tw1.jpg" alt="Twilight" class="film-poster">
+            <div class="film-information-box" id="fib45">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelve">
+                    <img src="ratings/12.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score seven">
+                    <p class="film-score-text">7/10</p>
+                </div>
+                <p class="film-name">Twilight</p>
+                <p class="film-director">Director: <span>Catherine Hardwicke</span></p>
+                <p class="film-release">Release Year: <span>2008</span></p>
+                <p class="film-genre">Genre: <span>Fantasy/Romance</span></p>
+                <p class="film-actors">Actors: <span>Kristen Stewart, Robert Pattinson, Taylor Lautner</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 57 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('tw2')" onmouseout="showinfoboxnew('tw2')">
+            <img src="posters/tw2.jpg" alt="Twilight" class="film-poster">
+            <div class="film-information-box" id="fib46">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelve">
+                    <img src="ratings/12.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score seven">
+                    <p class="film-score-text">7/10</p>
+                </div>
+                <p class="film-name">The Twilight Saga: New Moon</p>
+                <p class="film-director">Director: <span>Chris Weitz</span></p>
+                <p class="film-release">Release Year: <span>2009</span></p>
+                <p class="film-genre">Genre: <span>Fantasy/Romance</span></p>
+                <p class="film-actors">Actors: <span>Kristen Stewart, Robert Pattinson, Taylor Lautner</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 7 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('tw3')" onmouseout="showinfoboxnew('tw3')">
+            <img src="posters/tw3.jpg" alt="Twilight" class="film-poster">
+            <div class="film-information-box" id="fib47">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelve">
+                    <img src="ratings/12.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score seven">
+                    <p class="film-score-text">7/10</p>
+                </div>
+                <p class="film-name">The Twilight Saga: Eclipse</p>
+                <p class="film-director">Director: <span>David Slade</span></p>
+                <p class="film-release">Release Year: <span>2010</span></p>
+                <p class="film-genre">Genre: <span>Fantasy/Romance</span></p>
+                <p class="film-actors">Actors: <span>Kristen Stewart, Robert Pattinson, Taylor Lautner</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 59 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('tw4')" onmouseout="showinfoboxnew('tw4')">
+            <img src="posters/tw4.jpg" alt="Twilight" class="film-poster">
+            <div class="film-information-box" id="fib48">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelve">
+                    <img src="ratings/12.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score seven">
+                    <p class="film-score-text">7/10</p>
+                </div>
+                <p class="film-name">The Twilight Saga: Breaking Dawn – Part 1</p>
+                <p class="film-director">Director: <span>Bill Condon</span></p>
+                <p class="film-release">Release Year: <span>2011</span></p>
+                <p class="film-genre">Genre: <span>Fantasy/Romance</span></p>
+                <p class="film-actors">Actors: <span>Kristen Stewart, Robert Pattinson, Taylor Lautner</span></p>
+                <p class="film-runtime">Running Time: <span>2 hours 0 minutes</span></p>
+            </div>
+        </div>
+        
+        <div class="film-box" onmouseover="showinfoboxnew('tw5')" onmouseout="showinfoboxnew('tw5')">
+            <img src="posters/tw5.jpg" alt="Twilight" class="film-poster">
+            <div class="film-information-box" id="fib49">
+                <div class="film-ownership dvd">
+                    <img src="icons/dvd.png" class="film-ownership-icon">
+                </div>
+                <div class="film-ownership twelve">
+                    <img src="ratings/12.png" class="film-ownership-icon">
+                </div>
+                <div class="film-score seven">
+                    <p class="film-score-text">7/10</p>
+                </div>
+                <p class="film-name">The Twilight Saga: Breaking Dawn – Part 2</p>
+                <p class="film-director">Director: <span>Bill Condon</span></p>
+                <p class="film-release">Release Year: <span>2012</span></p>
+                <p class="film-genre">Genre: <span>Fantasy/Romance</span></p>
+                <p class="film-actors">Actors: <span>Kristen Stewart, Robert Pattinson, Taylor Lautner</span></p>
+                <p class="film-runtime">Running Time: <span>1 hour 51 minutes</span></p>
+            </div>
+        </div>
+        
+        </div>
+
+        
+        
+        
+    </body>
+    
+</html>

@@ -1,0 +1,568 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+@font-face {
+    font-family: california-gothic;
+     src: url(california-gothic.otf);
+}
+
+@font-face {
+    font-family: plymouth-regular;
+     src: url(plymouth-regular.ttf);
+}
+
+@font-face {
+    font-family: plymouth-bold;
+     src: url(plymouth-bold.ttf);
+}
+
+a{
+    text-decoration:none;
+    color:white;
+}
+
+/*Content-Box*/
+
+#content-box{
+    display:block;
+    float:left;
+    width:90vw;
+    margin:0vw 3vw 3vw 3vw;
+    padding:3vw 2vw 3vw 2vw;
+    overflow:hidden;
+    font-size: 0;
+}
+
+/*Sub-Title*/
+
+.sub-title-box{
+    display: inline-block;
+    float: left;
+    width: 100%;
+    margin: 1vw 1vw 3vw 1vw;
+}
+
+.sub-title{
+    width: 100%;
+    margin: 0;
+    font-size: 6vw;
+    font-weight: bold;
+    font-family: california-gothic;
+}
+
+@media only screen 
+  and (orientation: portrait) {
+      
+/*Content Box*/      
+      
+#content-box{
+    margin:10.5vw 3vw 3vw 3vw;
+}
+      
+/*Sub-Title*/       
+      
+.sub-title{
+    font-size: 9vw;
+}
+}
+
+#player-box-container{
+    margin: 0;
+    top: 0;
+    position: fixed;
+    display: none;
+    z-index: 2;
+    background-color: black;
+}
+
+#player-box{
+    position: relative;
+    display: none;
+    margin: 5vh 1vw 5vh 1vw;
+    width: 63vw;
+    height: 90vh;
+}
+
+#player-box-youtube{
+    position: relative;
+    display: none;
+    margin: 5vh 1vw 5vh 1vw;
+    width: 63vw;
+    height: 90vh;
+}
+
+#youtube-video{
+    width: 63vw;
+    height: 90vh;
+    margin:0;
+    position: absolute;
+    top: 0;
+}
+
+#video{
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    height:100%;
+    margin:0;
+    width: 100%;
+}
+
+#video:focus {
+    outline: none;
+}
+
+#source{
+    display: inline-block;
+    width:100%;
+    margin:0;
+}
+
+#player-information-box{
+    position: relative;
+    display: inline-block;
+    margin: 5vh 1vw 5vh 1vw;
+    width: 23vw;
+    height: 90vh;   
+}
+
+#player-poster{
+    display: block;
+    width: 100%;
+}
+
+#player-close{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    line-height: 1.55vw;
+    font-size: 1.5vw;
+    font-family: plymouth-regular;
+    text-align: center;
+    padding: 1vw 0;
+    color: black;
+    margin: 0;
+    cursor: pointer;
+}
+
+#player-close:hover{
+    background-color: cadetblue;
+    color: white;  
+}
+
+#search-box{
+    margin: 0 1vw;
+}
+
+#search1{
+    display: inline-block;
+    margin: 0;
+    width:15vw;
+    line-height: 1.25vw;
+    font-family: plymouth-regular;
+    font-size: 3vw;
+    color: white;
+    background-color: black;
+    border-top: solid white;
+    border-right: none;
+    border-bottom: solid white;
+    border-left: none;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#search1:focus {
+    width: 71vw;
+    outline: none;
+}
+
+::placeholder {
+    color: white; 
+}
+
+.size-option{
+    display: inline-block;
+    float: right;
+    line-height: 2.5vw;
+    font-size: 3vw;
+    width: 3vw;
+    height: 3vw;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    font-family: plymouth-regular;
+}
+
+#size-up{
+    cursor: pointer;
+    margin:0 3px 0 0;
+}
+
+#size-up:hover{
+    background-color: white;
+    color: black;
+}
+
+#size-down{
+    cursor: not-allowed;
+    margin:0;
+}
+
+#size-down:hover{
+    background-color: white;
+    color: black;
+}
+
+#advanced-search{
+    margin: 0 1vw 2vw 1vw;
+}
+
+.as-lables{
+    display: inline-block;
+    font-size: 2vw;
+    margin: 0 1vw;
+    font-family: plymouth-regular;
+    color: white;
+    width: 8vw;
+    text-align: right;
+}
+
+.ownership-options{
+    margin: 1vw 1vw 0 1vw;
+}
+
+#search2{
+    display: inline-block;
+    margin: 0 0  0;
+    width:auto;
+    line-height: 2vw;
+    font-family: plymouth-regular;
+    font-size: 2vw;
+    color: white;
+    background-color: black;
+    border: none;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#search2:focus {
+    outline: none;
+}
+
+
+#search3{
+    display: inline-block;
+    margin: 0 0  0;
+    width:auto;
+    line-height: 2vw;
+    font-family: plymouth-regular;
+    font-size: 2vw;
+    color: white;
+    background-color: black;
+    border: none;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#search3:focus {
+    outline: none;
+}
+
+#advanced{
+    display: inline-block;
+    line-height: 2vw;
+    font-size: 1.5vw;
+    text-align: left;
+    color: white;
+    padding: 5px;
+    font-family: plymouth-regular;
+    margin: 0;
+    cursor: pointer; 
+}
+
+#advanced:hover{
+    background-color: white;
+    color: black;
+}
+
+#advanced-options{
+    display: none;
+}
+
+.ownership-option{
+    display: inline-block;
+    height: 1.25vw;
+    font-size: 1vw;
+    width: 2vw;
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 0.75vw 1vw;
+    font-family: california-gothic;
+    margin:0 3px 0 0;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+.ownership-option:hover{
+    color: white;
+}
+
+.film-ownership-image{
+    width:100%;
+    position:relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#ownership-all:hover{
+    background-color: #263238;
+    color: white;
+}
+
+#ownership-amazonprimevideo:hover{
+    background-color: #CFD8DC;
+}
+
+#ownership-bluray:hover{
+    background-color: #BBDEFB;
+}
+
+#ownership-dvd:hover{
+    background-color: #E0E0E0;
+}
+
+#ownership-harddrive:hover{
+    background-color: #B2DFDB;
+}
+
+#ownership-rakutentv:hover{
+    background-color: #F8BBD0;
+}
+
+#ownership-youtube:hover{
+    background-color: #FFCDD2;
+}
+
+#rating-u:hover{
+    background-color: #C8E6C9;
+}
+
+#rating-pg:hover{
+    background-color: #FFECB3;
+}
+
+#rating-twelvea:hover{
+    background-color: #FFCCBC;
+}
+
+#rating-twelve:hover{
+    background-color: #FFCCBC;
+}
+
+#rating-fifteen:hover{
+    background-color: #F8BBD0;
+}
+
+#rating-eighteen:hover{
+    background-color: #FFCDD2;
+}
+
+#score-five:hover{
+    background-color: #B2DFDB; 
+}
+
+#score-six:hover{
+    background-color: #80DEEA; 
+}
+
+#score-seven:hover{
+    background-color: #4FC3F7; 
+}
+
+#score-eight:hover{
+    background-color: #2196F3; 
+}
+
+#score-nine:hover{
+    background-color: #303F9F; 
+}
+
+#score-ten:hover{
+    background-color: #311B92; 
+}
+
+.film-box{
+    display: inline-block;
+    position: relative;
+    height:auto;
+    width: 16vw;
+    margin: 0 1vw 2vw 1vw;
+    padding: 1px 0 0 0;
+    border: 0;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.film-poster{
+    width: 100%;
+    margin: 0;
+    vertical-align: bottom;
+    background-color: black;
+
+}
+
+.film-information-box{
+    position: absolute;
+    display: none;
+    top: 0px;
+    height: 100%;
+    width:100%;
+    background-color:rgba(255,255,255,0.9);
+    margin: 0;
+    color:black;
+}
+
+.film-name{
+    font-size: 1.5vw;
+    font-family: california-gothic;
+    padding: 0 5%;
+}
+
+
+.film-director, .film-release, .film-genre, .film-actors, .film-version, .film-runtime{
+    font-family: plymouth-regular;
+    width:90%;
+    padding: 0 5%;
+    font-weight: bold;
+    font-size: 1.1vw;
+}
+
+.film-director span, .film-release span, .film-genre span, .film-actors span, .film-version span, .film-runtime span{
+    font-weight: normal
+}
+
+.film-actors, .film-genre{
+    display: none;
+}
+
+.film-ownership{
+    display: inline-block;
+    margin: 1vw 0 0 0;
+    font-size: 1vw;
+    font-family: plymouth-bold;
+    font-weight: bold;
+    text-align: center;
+    mix-blend-mode: multiply; 
+    width: 2vw;
+    padding:5px;
+    height: 2vw;
+    color:white;
+    vertical-align:top;
+}
+
+.film-ownership-icon{
+    width:100%;
+    position:relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.blu-ray{
+    background-color: #BBDEFB;
+}
+
+.dvd{
+    background-color: #E0E0E0;
+}
+
+.hard-drive{
+    background-color: #B2DFDB;
+}
+
+.prime{
+    background-color: #CFD8DC;
+}
+
+.rakuten-tv{
+    background-color: #F8BBD0;
+}
+
+.youtube{
+    background-color: #FFCDD2;
+}
+
+.u{
+    background-color: #C8E6C9;
+}
+
+.pg{
+    background-color: #FFECB3;
+}
+
+.twelvea, .twelve{
+    background-color: #FFCCBC;
+}
+
+.fifteen{
+    background-color: #F8BBD0;
+}
+
+.eighteen{
+    background-color: #FFCDD2;
+}
+
+.film-score{
+    display: inline-block;
+    margin: 1vw 0 0 0;
+    text-align: center;
+    mix-blend-mode: multiply;
+    width: auto;
+    padding:5px;
+    height: 2vw;
+    color:white;
+    vertical-align:top;
+}
+
+.film-score-text{
+    font-size: 1.5vw;
+    font-family: california-gothic;
+    font-weight: bold;
+    margin: 0;
+    height: 2vw;
+    line-height: 1.7vw;
+    padding: 5px;
+}
+
+.five{
+    background-color: #B2DFDB; 
+}
+
+.six{
+    background-color: #80DEEA; 
+}
+
+.seven{
+    background-color: #4FC3F7; 
+}
+
+.eight{
+    background-color: #2196F3; 
+}
+
+.nine{
+    background-color: #303F9F; 
+}
+
+.ten{
+    background-color: #311B92; 
+}
