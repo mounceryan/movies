@@ -5,42 +5,42 @@ html, body{
 
 @font-face {
     font-family: california-gothic;
-     src: url(california-gothic.otf);
+     src: url(fonts/california-gothic.otf);
 }
 
 @font-face {
     font-family: plymouth-regular;
-     src: url(plymouth-regular.ttf);
+     src: url(fonts/plymouth-regular.ttf);
 }
 
 @font-face {
     font-family: plymouth-bold;
-     src: url(plymouth-bold.ttf);
+     src: url(fonts/plymouth-bold.ttf);
 }
 
 @font-face {
     font-family: gill-sans-light;
-     src: url(gill-sans-light.ttf);
+     src: url(fonts/gill-sans-light.ttf);
 }
 
 @font-face {
     font-family: hollywood-hills;
-     src: url(hollywood-hills.ttf);
+     src: url(fonts/hollywood-hills.ttf);
 }
 
 @font-face {
     font-family: aachen-bold;
-     src: url(aachen-bold.ttf);
+     src: url(fonts/aachen-bold.ttf);
 }
 
 @font-face {
     font-family: harry-potter;
-     src: url(harry-potter.ttf);
+     src: url(fonts/harry-potter.ttf);
 }
 
 @font-face {
     font-family: star-wars;
-     src: url(star-wars.ttf);
+     src: url(fonts/star-wars.ttf);
 }
 
 a{
