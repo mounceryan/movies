@@ -144,5 +144,10 @@ setInterval(function() {
 }, 5000);
 }
 
+//Refresh Page
+
+function refresh() {
+  location.reload();
+}
 
 
