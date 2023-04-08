@@ -37,8 +37,7 @@ function search1() {
             document.getElementById("search-results").style.display = "none";  
             document.getElementById("content").style.display = "block";
             document.getElementById("content").style.overflow = "initial";
-            document.getElementById("block").style.display = "none";  
-            document.getElementById("button-box").style.display = "block";  
+            document.getElementById("block").style.display = "none";   
         } else {
             boxes[i].parentElement.previousElementSibling.style.display = "none";
             boxes[i].parentElement.style.float = "left";
@@ -48,7 +47,6 @@ function search1() {
             document.getElementById("content").style.display = "flex";
             document.getElementById("content").style.overflow = "auto";
             document.getElementById("block").style.display = "block"; 
-            document.getElementById("button-box").style.display = "none";  
         }
     }
 }

@@ -1,5 +1,5 @@
 html, body{
-    background-color: black;
+    background-color: #263238;
     font-family: Helvetica;
     margin: 0;
 }
@@ -50,7 +50,7 @@ a{
 }
 
 .top-title-box{ 
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: #263238;
     margin: 0;
     padding: 1vw 0 1vw 1vw; 
     position: fixed;
@@ -77,11 +77,11 @@ a{
 }
 
 #search1{
-    background-color: black;
+    background-color: #263238;
     border-bottom: solid 5px white;
     border-left: none;
     border-right: none;
-    border-top: solid 5px black;
+    border-top: solid 5px #263238;
     display: block; 
     float: left;
     font-size: 3vw;
@@ -101,6 +101,7 @@ input#search1, input#search1::placeholder{
     color: white;
     display: none;
     font-size: 2vw;
+    font-weight: bold;
     margin: 0;
     padding: 1vw 0 0 1vw;
 }
@@ -148,8 +149,11 @@ input#search1, input#search1::placeholder{
     }
         
     #search-results{
-        font-size: 4vw;
-        padding: 2vw 0 0 2vw;
+        color: white;
+        font-size: 2vw;
+        font-weight: bold;
+        margin: 0;
+        padding: 0 0 0 1vw;
     }
 }
 
@@ -177,12 +181,12 @@ input#search1, input#search1::placeholder{
 }
 
 #view-genres:focus{
-    background-color: #424242;
+    background-color: #455A64;
     color: white;
 }
 
 #view-all{
-    background-color: #424242;
+    background-color: #455A64;
     color: white;
 }
 
@@ -265,7 +269,7 @@ input#search1, input#search1::placeholder{
 }
 
 .movie-information{
-    background-color:rgba(0, 0, 0, 0.75);
+    background-color:rgba(84, 110, 122, 0.9);
     height: 100%;
     margin: 0;
     position: absolute;
@@ -295,7 +299,6 @@ input#search1, input#search1::placeholder{
 .movie-detail:nth-child(3)::before {
     content: "Released in ";
 }
-
 
 .movie-detail-hidden{
     display: none;
